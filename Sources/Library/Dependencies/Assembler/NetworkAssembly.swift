@@ -24,7 +24,7 @@ final class NetworkAssembly: Assembly {
         }
         
         container.register(ApiDataNetworkConfig.self) { [urlConfiguration] resolver in
-            ApiDataNetworkConfig(baseURL: URL(string: urlConfiguration.apiBaseURL)!)
+            ApiDataNetworkConfig(baseURL: URL(string: urlConfiguration.apiBaseURL)!, queryParameters: ["client_id": urlConfiguration.clientId])
         }
     }
 }
