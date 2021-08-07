@@ -21,6 +21,7 @@ final class ApplicationCoordinator: Coordinator {
     init(window: UIWindow) {
         self.window = window
         presenter = UINavigationController()
+        presenter.setNavigationBarHidden(true, animated: true)
         window.rootViewController = presenter
         window.makeKeyAndVisible()
     }
@@ -28,6 +29,6 @@ final class ApplicationCoordinator: Coordinator {
     // MARK: Start
 
     func start() {
-        
+        presentCoordinator(TabBarCoordinator.self)
     }
 }

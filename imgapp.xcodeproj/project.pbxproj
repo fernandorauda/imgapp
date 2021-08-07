@@ -8,8 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		CE5E481826BE39DE00AB7FC9 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE5E481726BE39DE00AB7FC9 /* AppDelegate.swift */; };
-		CE5E481C26BE39DE00AB7FC9 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE5E481B26BE39DE00AB7FC9 /* ViewController.swift */; };
-		CE5E481F26BE39DE00AB7FC9 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CE5E481D26BE39DE00AB7FC9 /* Main.storyboard */; };
+		CE5E481C26BE39DE00AB7FC9 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE5E481B26BE39DE00AB7FC9 /* HomeViewController.swift */; };
 		CE5E482126BE39DF00AB7FC9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CE5E482026BE39DF00AB7FC9 /* Assets.xcassets */; };
 		CE5E482426BE39DF00AB7FC9 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CE5E482226BE39DF00AB7FC9 /* LaunchScreen.storyboard */; };
 		CE9B02F026BEBCE1007A4928 /* Coordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE9B02EF26BEBCE1007A4928 /* Coordinator.swift */; };
@@ -19,13 +18,18 @@
 		CE9B02FC26BEBDFD007A4928 /* Injector.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE9B02FB26BEBDFD007A4928 /* Injector.swift */; };
 		CE9B02FF26BEBE55007A4928 /* ApplicationCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE9B02FE26BEBE55007A4928 /* ApplicationCoordinator.swift */; };
 		CE9B030226BEC7F8007A4928 /* TabBarCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE9B030126BEC7F8007A4928 /* TabBarCoordinator.swift */; };
+		CE9B030426BEC96C007A4928 /* TabBarItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE9B030326BEC96C007A4928 /* TabBarItem.swift */; };
+		CE9B030826BECEE1007A4928 /* HomeViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = CE9B030726BECEE1007A4928 /* HomeViewController.xib */; };
+		CE9B030B26BECF9A007A4928 /* LikesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE9B030A26BECF9A007A4928 /* LikesViewController.swift */; };
+		CE9B030D26BECFA6007A4928 /* LikesViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = CE9B030C26BECFA6007A4928 /* LikesViewController.xib */; };
+		CE9B030F26BED356007A4928 /* CoordinatorAssembly.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE9B030E26BED356007A4928 /* CoordinatorAssembly.swift */; };
+		CE9B031226BEE63F007A4928 /* ImagesRequestDTO.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE9B031126BEE63F007A4928 /* ImagesRequestDTO.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		CE5E481426BE39DE00AB7FC9 /* imgapp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = imgapp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CE5E481726BE39DE00AB7FC9 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		CE5E481B26BE39DE00AB7FC9 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		CE5E481E26BE39DE00AB7FC9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		CE5E481B26BE39DE00AB7FC9 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		CE5E482026BE39DF00AB7FC9 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		CE5E482326BE39DF00AB7FC9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		CE5E482526BE39DF00AB7FC9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -34,6 +38,12 @@
 		CE9B02FB26BEBDFD007A4928 /* Injector.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Injector.swift; sourceTree = "<group>"; };
 		CE9B02FE26BEBE55007A4928 /* ApplicationCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApplicationCoordinator.swift; sourceTree = "<group>"; };
 		CE9B030126BEC7F8007A4928 /* TabBarCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarCoordinator.swift; sourceTree = "<group>"; };
+		CE9B030326BEC96C007A4928 /* TabBarItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarItem.swift; sourceTree = "<group>"; };
+		CE9B030726BECEE1007A4928 /* HomeViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HomeViewController.xib; sourceTree = "<group>"; };
+		CE9B030A26BECF9A007A4928 /* LikesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LikesViewController.swift; sourceTree = "<group>"; };
+		CE9B030C26BECFA6007A4928 /* LikesViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LikesViewController.xib; sourceTree = "<group>"; };
+		CE9B030E26BED356007A4928 /* CoordinatorAssembly.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoordinatorAssembly.swift; sourceTree = "<group>"; };
+		CE9B031126BEE63F007A4928 /* ImagesRequestDTO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImagesRequestDTO.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -109,6 +119,7 @@
 		CE9B02EA26BEB949007A4928 /* Network */ = {
 			isa = PBXGroup;
 			children = (
+				CE9B031026BEE624007A4928 /* Data Mapping */,
 			);
 			path = Network;
 			sourceTree = "<group>";
@@ -116,8 +127,7 @@
 		CE9B02EB26BEB951007A4928 /* Features */ = {
 			isa = PBXGroup;
 			children = (
-				CE5E481B26BE39DE00AB7FC9 /* ViewController.swift */,
-				CE5E481D26BE39DE00AB7FC9 /* Main.storyboard */,
+				CE9B030526BECEC7007A4928 /* ViewControllers */,
 			);
 			path = Features;
 			sourceTree = "<group>";
@@ -127,6 +137,7 @@
 			children = (
 				CE9B02FE26BEBE55007A4928 /* ApplicationCoordinator.swift */,
 				CE9B030126BEC7F8007A4928 /* TabBarCoordinator.swift */,
+				CE9B030326BEC96C007A4928 /* TabBarItem.swift */,
 			);
 			path = Navigation;
 			sourceTree = "<group>";
@@ -167,8 +178,44 @@
 		CE9B02FD26BEBE37007A4928 /* Assembler */ = {
 			isa = PBXGroup;
 			children = (
+				CE9B030E26BED356007A4928 /* CoordinatorAssembly.swift */,
 			);
 			path = Assembler;
+			sourceTree = "<group>";
+		};
+		CE9B030526BECEC7007A4928 /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				CE9B030926BECF7C007A4928 /* LikesViewController */,
+				CE9B030626BECED1007A4928 /* HomeViewController */,
+			);
+			path = ViewControllers;
+			sourceTree = "<group>";
+		};
+		CE9B030626BECED1007A4928 /* HomeViewController */ = {
+			isa = PBXGroup;
+			children = (
+				CE5E481B26BE39DE00AB7FC9 /* HomeViewController.swift */,
+				CE9B030726BECEE1007A4928 /* HomeViewController.xib */,
+			);
+			path = HomeViewController;
+			sourceTree = "<group>";
+		};
+		CE9B030926BECF7C007A4928 /* LikesViewController */ = {
+			isa = PBXGroup;
+			children = (
+				CE9B030A26BECF9A007A4928 /* LikesViewController.swift */,
+				CE9B030C26BECFA6007A4928 /* LikesViewController.xib */,
+			);
+			path = LikesViewController;
+			sourceTree = "<group>";
+		};
+		CE9B031026BEE624007A4928 /* Data Mapping */ = {
+			isa = PBXGroup;
+			children = (
+				CE9B031126BEE63F007A4928 /* ImagesRequestDTO.swift */,
+			);
+			path = "Data Mapping";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -238,7 +285,8 @@
 			files = (
 				CE5E482426BE39DF00AB7FC9 /* LaunchScreen.storyboard in Resources */,
 				CE5E482126BE39DF00AB7FC9 /* Assets.xcassets in Resources */,
-				CE5E481F26BE39DE00AB7FC9 /* Main.storyboard in Resources */,
+				CE9B030826BECEE1007A4928 /* HomeViewController.xib in Resources */,
+				CE9B030D26BECFA6007A4928 /* LikesViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -250,11 +298,15 @@
 			buildActionMask = 2147483647;
 			files = (
 				CE9B02FC26BEBDFD007A4928 /* Injector.swift in Sources */,
-				CE5E481C26BE39DE00AB7FC9 /* ViewController.swift in Sources */,
+				CE5E481C26BE39DE00AB7FC9 /* HomeViewController.swift in Sources */,
+				CE9B030F26BED356007A4928 /* CoordinatorAssembly.swift in Sources */,
 				CE5E481826BE39DE00AB7FC9 /* AppDelegate.swift in Sources */,
 				CE9B030226BEC7F8007A4928 /* TabBarCoordinator.swift in Sources */,
 				CE9B02F326BEBD11007A4928 /* Optional+Unwrap.swift in Sources */,
+				CE9B031226BEE63F007A4928 /* ImagesRequestDTO.swift in Sources */,
+				CE9B030B26BECF9A007A4928 /* LikesViewController.swift in Sources */,
 				CE9B02F026BEBCE1007A4928 /* Coordinator.swift in Sources */,
+				CE9B030426BEC96C007A4928 /* TabBarItem.swift in Sources */,
 				CE9B02FF26BEBE55007A4928 /* ApplicationCoordinator.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -262,14 +314,6 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		CE5E481D26BE39DE00AB7FC9 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				CE5E481E26BE39DE00AB7FC9 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		CE5E482226BE39DF00AB7FC9 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -400,6 +444,7 @@
 		CE5E482926BE39DF00AB7FC9 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				API_BASE_URL = "https://api.unsplash.com";
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
@@ -419,6 +464,7 @@
 		CE5E482A26BE39DF00AB7FC9 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				API_BASE_URL = "https://api.unsplash.com";
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
