@@ -6,11 +6,18 @@
 //
 
 import UIKit
+import RxSwift
 
 final class HomeViewController: UIViewController {
+    // MARK: Components
+
+    private let viewModel: HomeViewModel
+    private let disposeBag = DisposeBag()
+
     // MARK: - LifeCycle
 
-    init() {
+    init(viewModel: HomeViewModel) {
+        self.viewModel = viewModel
         super.init(nibName: nil, bundle: nil)
     }
 
@@ -24,6 +31,19 @@ final class HomeViewController: UIViewController {
         
         navigationController?.navigationBar.topItem?.title = "Photos"
         navigationController?.navigationBar.prefersLargeTitles = true
+        
+        setupBindings()
+        viewModel.input.loadImages.onNext(())
+    }
+
+    // MARK: - Bindings
+
+    private func setupBindings() {
+        viewModel.output.images
+            .observe(on: MainScheduler.asyncInstance)
+            .subscribe(onNext: { images in
+                print(images)
+            }).disposed(by: disposeBag)
     }
 }
 
