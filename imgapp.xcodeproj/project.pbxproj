@@ -40,6 +40,11 @@
 		CE9B033126BF148E007A4928 /* NetworkConfigurable.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE9B033026BF148E007A4928 /* NetworkConfigurable.swift */; };
 		CE9B033426BF2812007A4928 /* HomeFetcher.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE9B033326BF2812007A4928 /* HomeFetcher.swift */; };
 		CE9B033626BF28BE007A4928 /* HomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE9B033526BF28BE007A4928 /* HomeViewModel.swift */; };
+		CE9B033826BF2C7C007A4928 /* ViewModelAssembly.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE9B033726BF2C7C007A4928 /* ViewModelAssembly.swift */; };
+		CE9B033A26BF2D9C007A4928 /* ViewControllerAssembly.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE9B033926BF2D9C007A4928 /* ViewControllerAssembly.swift */; };
+		CE9B033C26BF3029007A4928 /* NetworkAssembly.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE9B033B26BF3029007A4928 /* NetworkAssembly.swift */; };
+		CE9B033E26BF3093007A4928 /* FetcherAssembly.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE9B033D26BF3093007A4928 /* FetcherAssembly.swift */; };
+		CE9B034026BF30BB007A4928 /* RepositoryAssembler.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE9B033F26BF30BB007A4928 /* RepositoryAssembler.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -74,6 +79,11 @@
 		CE9B033026BF148E007A4928 /* NetworkConfigurable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkConfigurable.swift; sourceTree = "<group>"; };
 		CE9B033326BF2812007A4928 /* HomeFetcher.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeFetcher.swift; sourceTree = "<group>"; };
 		CE9B033526BF28BE007A4928 /* HomeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewModel.swift; sourceTree = "<group>"; };
+		CE9B033726BF2C7C007A4928 /* ViewModelAssembly.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewModelAssembly.swift; sourceTree = "<group>"; };
+		CE9B033926BF2D9C007A4928 /* ViewControllerAssembly.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewControllerAssembly.swift; sourceTree = "<group>"; };
+		CE9B033B26BF3029007A4928 /* NetworkAssembly.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkAssembly.swift; sourceTree = "<group>"; };
+		CE9B033D26BF3093007A4928 /* FetcherAssembly.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FetcherAssembly.swift; sourceTree = "<group>"; };
+		CE9B033F26BF30BB007A4928 /* RepositoryAssembler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepositoryAssembler.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -221,6 +231,11 @@
 			isa = PBXGroup;
 			children = (
 				CE9B030E26BED356007A4928 /* CoordinatorAssembly.swift */,
+				CE9B033726BF2C7C007A4928 /* ViewModelAssembly.swift */,
+				CE9B033926BF2D9C007A4928 /* ViewControllerAssembly.swift */,
+				CE9B033B26BF3029007A4928 /* NetworkAssembly.swift */,
+				CE9B033D26BF3093007A4928 /* FetcherAssembly.swift */,
+				CE9B033F26BF30BB007A4928 /* RepositoryAssembler.swift */,
 			);
 			path = Assembler;
 			sourceTree = "<group>";
@@ -372,6 +387,9 @@
 			files = (
 				CE9B02FC26BEBDFD007A4928 /* Injector.swift in Sources */,
 				CE9B031B26BEEBC4007A4928 /* UrlConfiguration.swift in Sources */,
+				CE9B033A26BF2D9C007A4928 /* ViewControllerAssembly.swift in Sources */,
+				CE9B033826BF2C7C007A4928 /* ViewModelAssembly.swift in Sources */,
+				CE9B034026BF30BB007A4928 /* RepositoryAssembler.swift in Sources */,
 				CE9B031526BEE736007A4928 /* Image.swift in Sources */,
 				CE9B033626BF28BE007A4928 /* HomeViewModel.swift in Sources */,
 				CE5E481C26BE39DE00AB7FC9 /* HomeViewController.swift in Sources */,
@@ -388,8 +406,10 @@
 				CE9B031D26BEEC1A007A4928 /* Endpoint.swift in Sources */,
 				CE9B032D26BEF9F3007A4928 /* ImageRepository.swift in Sources */,
 				CE9B031226BEE63F007A4928 /* ImagesRequestDTO.swift in Sources */,
+				CE9B033E26BF3093007A4928 /* FetcherAssembly.swift in Sources */,
 				CE9B030B26BECF9A007A4928 /* LikesViewController.swift in Sources */,
 				CE9B032F26BF1098007A4928 /* ImageResponseDTO.swift in Sources */,
+				CE9B033C26BF3029007A4928 /* NetworkAssembly.swift in Sources */,
 				CE9B02F026BEBCE1007A4928 /* Coordinator.swift in Sources */,
 				CE9B031F26BEED88007A4928 /* APIEndpoints.swift in Sources */,
 				CE9B030426BEC96C007A4928 /* TabBarItem.swift in Sources */,
