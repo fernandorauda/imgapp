@@ -38,6 +38,7 @@
 		CE9B032D26BEF9F3007A4928 /* ImageRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE9B032C26BEF9F3007A4928 /* ImageRepository.swift */; };
 		CE9B032F26BF1098007A4928 /* ImageResponseDTO.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE9B032E26BF1098007A4928 /* ImageResponseDTO.swift */; };
 		CE9B033126BF148E007A4928 /* NetworkConfigurable.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE9B033026BF148E007A4928 /* NetworkConfigurable.swift */; };
+		CE9B033426BF2812007A4928 /* HomeFetcher.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE9B033326BF2812007A4928 /* HomeFetcher.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -70,6 +71,7 @@
 		CE9B032C26BEF9F3007A4928 /* ImageRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageRepository.swift; sourceTree = "<group>"; };
 		CE9B032E26BF1098007A4928 /* ImageResponseDTO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageResponseDTO.swift; sourceTree = "<group>"; };
 		CE9B033026BF148E007A4928 /* NetworkConfigurable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkConfigurable.swift; sourceTree = "<group>"; };
+		CE9B033326BF2812007A4928 /* HomeFetcher.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeFetcher.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -162,6 +164,7 @@
 		CE9B02EB26BEB951007A4928 /* Features */ = {
 			isa = PBXGroup;
 			children = (
+				CE9B033226BF27EF007A4928 /* Services */,
 				CE9B032B26BEF9D9007A4928 /* Repositories */,
 				CE9B031326BEE71E007A4928 /* Models */,
 				CE9B030526BECEC7007A4928 /* ViewControllers */,
@@ -274,6 +277,14 @@
 			path = Repositories;
 			sourceTree = "<group>";
 		};
+		CE9B033226BF27EF007A4928 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				CE9B033326BF2812007A4928 /* HomeFetcher.swift */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -362,6 +373,7 @@
 				CE5E481C26BE39DE00AB7FC9 /* HomeViewController.swift in Sources */,
 				CE9B032126BEF13A007A4928 /* NetworkService.swift in Sources */,
 				CE9B030F26BED356007A4928 /* CoordinatorAssembly.swift in Sources */,
+				CE9B033426BF2812007A4928 /* HomeFetcher.swift in Sources */,
 				CE5E481826BE39DE00AB7FC9 /* AppDelegate.swift in Sources */,
 				CE9B032326BEF2DB007A4928 /* DataTransferService.swift in Sources */,
 				CE9B033126BF148E007A4928 /* NetworkConfigurable.swift in Sources */,

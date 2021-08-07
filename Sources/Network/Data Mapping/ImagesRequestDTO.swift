@@ -14,6 +14,5 @@ struct ImagesRequestDTO: Encodable {
     enum CodingKeys: String, CodingKey {
         case page
         case perPage = "per_page"
-        case clientId = "client_id"
     }
 }
