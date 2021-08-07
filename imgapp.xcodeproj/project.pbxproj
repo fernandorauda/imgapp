@@ -24,6 +24,20 @@
 		CE9B030D26BECFA6007A4928 /* LikesViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = CE9B030C26BECFA6007A4928 /* LikesViewController.xib */; };
 		CE9B030F26BED356007A4928 /* CoordinatorAssembly.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE9B030E26BED356007A4928 /* CoordinatorAssembly.swift */; };
 		CE9B031226BEE63F007A4928 /* ImagesRequestDTO.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE9B031126BEE63F007A4928 /* ImagesRequestDTO.swift */; };
+		CE9B031526BEE736007A4928 /* Image.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE9B031426BEE736007A4928 /* Image.swift */; };
+		CE9B031726BEE788007A4928 /* Url.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE9B031626BEE788007A4928 /* Url.swift */; };
+		CE9B031926BEE82C007A4928 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE9B031826BEE82C007A4928 /* User.swift */; };
+		CE9B031B26BEEBC4007A4928 /* UrlConfiguration.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE9B031A26BEEBC4007A4928 /* UrlConfiguration.swift */; };
+		CE9B031D26BEEC1A007A4928 /* Endpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE9B031C26BEEC1A007A4928 /* Endpoint.swift */; };
+		CE9B031F26BEED88007A4928 /* APIEndpoints.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE9B031E26BEED88007A4928 /* APIEndpoints.swift */; };
+		CE9B032126BEF13A007A4928 /* NetworkService.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE9B032026BEF13A007A4928 /* NetworkService.swift */; };
+		CE9B032326BEF2DB007A4928 /* DataTransferService.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE9B032226BEF2DB007A4928 /* DataTransferService.swift */; };
+		CE9B032626BEF36B007A4928 /* RxSwift in Frameworks */ = {isa = PBXBuildFile; productRef = CE9B032526BEF36B007A4928 /* RxSwift */; };
+		CE9B032826BEF36B007A4928 /* RxCocoa in Frameworks */ = {isa = PBXBuildFile; productRef = CE9B032726BEF36B007A4928 /* RxCocoa */; };
+		CE9B032A26BEF414007A4928 /* DataService.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE9B032926BEF414007A4928 /* DataService.swift */; };
+		CE9B032D26BEF9F3007A4928 /* ImageRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE9B032C26BEF9F3007A4928 /* ImageRepository.swift */; };
+		CE9B032F26BF1098007A4928 /* ImageResponseDTO.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE9B032E26BF1098007A4928 /* ImageResponseDTO.swift */; };
+		CE9B033126BF148E007A4928 /* NetworkConfigurable.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE9B033026BF148E007A4928 /* NetworkConfigurable.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -44,6 +58,18 @@
 		CE9B030C26BECFA6007A4928 /* LikesViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LikesViewController.xib; sourceTree = "<group>"; };
 		CE9B030E26BED356007A4928 /* CoordinatorAssembly.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoordinatorAssembly.swift; sourceTree = "<group>"; };
 		CE9B031126BEE63F007A4928 /* ImagesRequestDTO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImagesRequestDTO.swift; sourceTree = "<group>"; };
+		CE9B031426BEE736007A4928 /* Image.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Image.swift; sourceTree = "<group>"; };
+		CE9B031626BEE788007A4928 /* Url.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Url.swift; sourceTree = "<group>"; };
+		CE9B031826BEE82C007A4928 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		CE9B031A26BEEBC4007A4928 /* UrlConfiguration.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UrlConfiguration.swift; sourceTree = "<group>"; };
+		CE9B031C26BEEC1A007A4928 /* Endpoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Endpoint.swift; sourceTree = "<group>"; };
+		CE9B031E26BEED88007A4928 /* APIEndpoints.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIEndpoints.swift; sourceTree = "<group>"; };
+		CE9B032026BEF13A007A4928 /* NetworkService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkService.swift; sourceTree = "<group>"; };
+		CE9B032226BEF2DB007A4928 /* DataTransferService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataTransferService.swift; sourceTree = "<group>"; };
+		CE9B032926BEF414007A4928 /* DataService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataService.swift; sourceTree = "<group>"; };
+		CE9B032C26BEF9F3007A4928 /* ImageRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageRepository.swift; sourceTree = "<group>"; };
+		CE9B032E26BF1098007A4928 /* ImageResponseDTO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageResponseDTO.swift; sourceTree = "<group>"; };
+		CE9B033026BF148E007A4928 /* NetworkConfigurable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkConfigurable.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -51,7 +77,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CE9B032626BEF36B007A4928 /* RxSwift in Frameworks */,
 				CE9B02F626BEBD6A007A4928 /* Swinject in Frameworks */,
+				CE9B032826BEF36B007A4928 /* RxCocoa in Frameworks */,
 				CE9B02F926BEBDBA007A4928 /* SwinjectAutoregistration in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -120,6 +148,13 @@
 			isa = PBXGroup;
 			children = (
 				CE9B031026BEE624007A4928 /* Data Mapping */,
+				CE9B031A26BEEBC4007A4928 /* UrlConfiguration.swift */,
+				CE9B031C26BEEC1A007A4928 /* Endpoint.swift */,
+				CE9B031E26BEED88007A4928 /* APIEndpoints.swift */,
+				CE9B032026BEF13A007A4928 /* NetworkService.swift */,
+				CE9B032226BEF2DB007A4928 /* DataTransferService.swift */,
+				CE9B032926BEF414007A4928 /* DataService.swift */,
+				CE9B033026BF148E007A4928 /* NetworkConfigurable.swift */,
 			);
 			path = Network;
 			sourceTree = "<group>";
@@ -127,6 +162,8 @@
 		CE9B02EB26BEB951007A4928 /* Features */ = {
 			isa = PBXGroup;
 			children = (
+				CE9B032B26BEF9D9007A4928 /* Repositories */,
+				CE9B031326BEE71E007A4928 /* Models */,
 				CE9B030526BECEC7007A4928 /* ViewControllers */,
 			);
 			path = Features;
@@ -214,8 +251,27 @@
 			isa = PBXGroup;
 			children = (
 				CE9B031126BEE63F007A4928 /* ImagesRequestDTO.swift */,
+				CE9B032E26BF1098007A4928 /* ImageResponseDTO.swift */,
 			);
 			path = "Data Mapping";
+			sourceTree = "<group>";
+		};
+		CE9B031326BEE71E007A4928 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				CE9B031426BEE736007A4928 /* Image.swift */,
+				CE9B031626BEE788007A4928 /* Url.swift */,
+				CE9B031826BEE82C007A4928 /* User.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		CE9B032B26BEF9D9007A4928 /* Repositories */ = {
+			isa = PBXGroup;
+			children = (
+				CE9B032C26BEF9F3007A4928 /* ImageRepository.swift */,
+			);
+			path = Repositories;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -237,6 +293,8 @@
 			packageProductDependencies = (
 				CE9B02F526BEBD6A007A4928 /* Swinject */,
 				CE9B02F826BEBDBA007A4928 /* SwinjectAutoregistration */,
+				CE9B032526BEF36B007A4928 /* RxSwift */,
+				CE9B032726BEF36B007A4928 /* RxCocoa */,
 			);
 			productName = imgapp;
 			productReference = CE5E481426BE39DE00AB7FC9 /* imgapp.app */;
@@ -268,6 +326,7 @@
 			packageReferences = (
 				CE9B02F426BEBD6A007A4928 /* XCRemoteSwiftPackageReference "Swinject" */,
 				CE9B02F726BEBDBA007A4928 /* XCRemoteSwiftPackageReference "SwinjectAutoregistration" */,
+				CE9B032426BEF36B007A4928 /* XCRemoteSwiftPackageReference "RxSwift" */,
 			);
 			productRefGroup = CE5E481526BE39DE00AB7FC9 /* Products */;
 			projectDirPath = "";
@@ -298,16 +357,28 @@
 			buildActionMask = 2147483647;
 			files = (
 				CE9B02FC26BEBDFD007A4928 /* Injector.swift in Sources */,
+				CE9B031B26BEEBC4007A4928 /* UrlConfiguration.swift in Sources */,
+				CE9B031526BEE736007A4928 /* Image.swift in Sources */,
 				CE5E481C26BE39DE00AB7FC9 /* HomeViewController.swift in Sources */,
+				CE9B032126BEF13A007A4928 /* NetworkService.swift in Sources */,
 				CE9B030F26BED356007A4928 /* CoordinatorAssembly.swift in Sources */,
 				CE5E481826BE39DE00AB7FC9 /* AppDelegate.swift in Sources */,
+				CE9B032326BEF2DB007A4928 /* DataTransferService.swift in Sources */,
+				CE9B033126BF148E007A4928 /* NetworkConfigurable.swift in Sources */,
+				CE9B031726BEE788007A4928 /* Url.swift in Sources */,
+				CE9B031926BEE82C007A4928 /* User.swift in Sources */,
 				CE9B030226BEC7F8007A4928 /* TabBarCoordinator.swift in Sources */,
 				CE9B02F326BEBD11007A4928 /* Optional+Unwrap.swift in Sources */,
+				CE9B031D26BEEC1A007A4928 /* Endpoint.swift in Sources */,
+				CE9B032D26BEF9F3007A4928 /* ImageRepository.swift in Sources */,
 				CE9B031226BEE63F007A4928 /* ImagesRequestDTO.swift in Sources */,
 				CE9B030B26BECF9A007A4928 /* LikesViewController.swift in Sources */,
+				CE9B032F26BF1098007A4928 /* ImageResponseDTO.swift in Sources */,
 				CE9B02F026BEBCE1007A4928 /* Coordinator.swift in Sources */,
+				CE9B031F26BEED88007A4928 /* APIEndpoints.swift in Sources */,
 				CE9B030426BEC96C007A4928 /* TabBarItem.swift in Sources */,
 				CE9B02FF26BEBE55007A4928 /* ApplicationCoordinator.swift in Sources */,
+				CE9B032A26BEF414007A4928 /* DataService.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -521,6 +592,14 @@
 				minimumVersion = 2.7.0;
 			};
 		};
+		CE9B032426BEF36B007A4928 /* XCRemoteSwiftPackageReference "RxSwift" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/ReactiveX/RxSwift.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 6.2.0;
+			};
+		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
@@ -533,6 +612,16 @@
 			isa = XCSwiftPackageProductDependency;
 			package = CE9B02F726BEBDBA007A4928 /* XCRemoteSwiftPackageReference "SwinjectAutoregistration" */;
 			productName = SwinjectAutoregistration;
+		};
+		CE9B032526BEF36B007A4928 /* RxSwift */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = CE9B032426BEF36B007A4928 /* XCRemoteSwiftPackageReference "RxSwift" */;
+			productName = RxSwift;
+		};
+		CE9B032726BEF36B007A4928 /* RxCocoa */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = CE9B032426BEF36B007A4928 /* XCRemoteSwiftPackageReference "RxSwift" */;
+			productName = RxCocoa;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};
