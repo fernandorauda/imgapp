@@ -39,6 +39,7 @@
 		CE9B032F26BF1098007A4928 /* ImageResponseDTO.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE9B032E26BF1098007A4928 /* ImageResponseDTO.swift */; };
 		CE9B033126BF148E007A4928 /* NetworkConfigurable.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE9B033026BF148E007A4928 /* NetworkConfigurable.swift */; };
 		CE9B033426BF2812007A4928 /* HomeFetcher.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE9B033326BF2812007A4928 /* HomeFetcher.swift */; };
+		CE9B033626BF28BE007A4928 /* HomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE9B033526BF28BE007A4928 /* HomeViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -72,6 +73,7 @@
 		CE9B032E26BF1098007A4928 /* ImageResponseDTO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageResponseDTO.swift; sourceTree = "<group>"; };
 		CE9B033026BF148E007A4928 /* NetworkConfigurable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkConfigurable.swift; sourceTree = "<group>"; };
 		CE9B033326BF2812007A4928 /* HomeFetcher.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeFetcher.swift; sourceTree = "<group>"; };
+		CE9B033526BF28BE007A4928 /* HomeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -235,6 +237,7 @@
 		CE9B030626BECED1007A4928 /* HomeViewController */ = {
 			isa = PBXGroup;
 			children = (
+				CE9B033526BF28BE007A4928 /* HomeViewModel.swift */,
 				CE5E481B26BE39DE00AB7FC9 /* HomeViewController.swift */,
 				CE9B030726BECEE1007A4928 /* HomeViewController.xib */,
 			);
@@ -370,6 +373,7 @@
 				CE9B02FC26BEBDFD007A4928 /* Injector.swift in Sources */,
 				CE9B031B26BEEBC4007A4928 /* UrlConfiguration.swift in Sources */,
 				CE9B031526BEE736007A4928 /* Image.swift in Sources */,
+				CE9B033626BF28BE007A4928 /* HomeViewModel.swift in Sources */,
 				CE5E481C26BE39DE00AB7FC9 /* HomeViewController.swift in Sources */,
 				CE9B032126BEF13A007A4928 /* NetworkService.swift in Sources */,
 				CE9B030F26BED356007A4928 /* CoordinatorAssembly.swift in Sources */,
