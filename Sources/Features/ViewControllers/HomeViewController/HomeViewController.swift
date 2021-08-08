@@ -39,9 +39,7 @@ final class HomeViewController: UIViewController {
         navigationController?.navigationBar.topItem?.title = "Photos"
         navigationController?.navigationBar.prefersLargeTitles = true
         
-        
-        collectionView.register(ImageCollectionViewCell.self, forCellWithReuseIdentifier: String(describing:ImageCollectionViewCell.self))
-        
+        registerCells()
         setupBindings()
     }
     
@@ -57,6 +55,11 @@ final class HomeViewController: UIViewController {
             .subscribe(onNext: { [weak self] sections in
                 self?.getDataSource(sectionType: sections)
             }).disposed(by: disposeBag)
+    }
+    
+    private func registerCells() {
+        collectionView.register(ImageCollectionViewCell.self, forCellWithReuseIdentifier: String(describing:ImageCollectionViewCell.self))
+        collectionView.register(LoadingCollectionViewCell.self, forCellWithReuseIdentifier: String(describing:LoadingCollectionViewCell.self))
     }
     
     // MARK: Configuration

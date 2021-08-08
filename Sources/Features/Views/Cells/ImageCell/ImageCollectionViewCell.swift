@@ -8,7 +8,7 @@
 import Kingfisher
 import UIKit
 
-class ImageCollectionViewCell: UICollectionViewCell {
+final class ImageCollectionViewCell: UICollectionViewCell {
     // MARK: - Components
 
     private lazy var imageView: UIImageView = {

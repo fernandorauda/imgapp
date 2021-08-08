@@ -42,7 +42,7 @@ struct HomeViewModelDefault: HomeViewModel {
         let imagesResult = input.loadImages
             .flatMapLatest { [homeFetcher, factory] _ -> Observable<[SectionType]> in
                 homeFetcher.fetch().map { images -> [SectionType] in
-                    factory.sections(images: images ?? [])
+                    factory.sections(images: images ?? [], isLoading: true)
                 }
             }
         
