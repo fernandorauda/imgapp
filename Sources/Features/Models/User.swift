@@ -11,7 +11,7 @@ struct User: Decodable {
     let id: String?
     let username: String?
     let name: String?
-    let profileImage: ProfileImage?
+    let profileImage: Url?
     
     enum CodingKeys: String, CodingKey {
         case id
@@ -19,8 +19,4 @@ struct User: Decodable {
         case name
         case profileImage = "profile_image"
     }
-}
-
-struct ProfileImage: Decodable {
-    let medium: String?
 }

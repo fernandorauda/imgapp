@@ -65,6 +65,8 @@
 		CEA777A626C076B10003D821 /* ObservableType+Void.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEA777A526C076B10003D821 /* ObservableType+Void.swift */; };
 		CEA777A826C07E330003D821 /* UIScrollView+Distance.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEA777A726C07E330003D821 /* UIScrollView+Distance.swift */; };
 		CEA777AA26C092650003D821 /* UIResponder+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEA777A926C092650003D821 /* UIResponder+Extension.swift */; };
+		CEA777AE26C0981D0003D821 /* Images.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = CEA777AC26C0981D0003D821 /* Images.xcdatamodeld */; };
+		CEA777B026C09A610003D821 /* DataEngine.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEA777AF26C09A610003D821 /* DataEngine.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -123,6 +125,8 @@
 		CEA777A526C076B10003D821 /* ObservableType+Void.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ObservableType+Void.swift"; sourceTree = "<group>"; };
 		CEA777A726C07E330003D821 /* UIScrollView+Distance.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIScrollView+Distance.swift"; sourceTree = "<group>"; };
 		CEA777A926C092650003D821 /* UIResponder+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIResponder+Extension.swift"; sourceTree = "<group>"; };
+		CEA777AD26C0981D0003D821 /* Images.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Images.xcdatamodel; sourceTree = "<group>"; };
+		CEA777AF26C09A610003D821 /* DataEngine.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataEngine.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -160,6 +164,7 @@
 		CE5E481626BE39DE00AB7FC9 /* Sources */ = {
 			isa = PBXGroup;
 			children = (
+				CEA777AB26C096020003D821 /* Persistency */,
 				CE9B02EC26BEB956007A4928 /* Navigation */,
 				CE9B02EB26BEB951007A4928 /* Features */,
 				CE9B02EA26BEB949007A4928 /* Network */,
@@ -426,6 +431,15 @@
 			path = Utils;
 			sourceTree = "<group>";
 		};
+		CEA777AB26C096020003D821 /* Persistency */ = {
+			isa = PBXGroup;
+			children = (
+				CEA777AC26C0981D0003D821 /* Images.xcdatamodeld */,
+				CEA777AF26C09A610003D821 /* DataEngine.swift */,
+			);
+			path = Persistency;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -517,6 +531,7 @@
 				CEA777A826C07E330003D821 /* UIScrollView+Distance.swift in Sources */,
 				CE9B033826BF2C7C007A4928 /* ViewModelAssembly.swift in Sources */,
 				CE9B034026BF30BB007A4928 /* RepositoryAssembler.swift in Sources */,
+				CEA777AE26C0981D0003D821 /* Images.xcdatamodeld in Sources */,
 				CEA7779026C042F80003D821 /* UILabel+Shadow.swift in Sources */,
 				CEA777AA26C092650003D821 /* UIResponder+Extension.swift in Sources */,
 				CEA7779B26C06D590003D821 /* HomeSectionProvider.swift in Sources */,
@@ -554,6 +569,7 @@
 				CE9B033C26BF3029007A4928 /* NetworkAssembly.swift in Sources */,
 				CE9B035526BF8140007A4928 /* DataSource.swift in Sources */,
 				CE9B02F026BEBCE1007A4928 /* Coordinator.swift in Sources */,
+				CEA777B026C09A610003D821 /* DataEngine.swift in Sources */,
 				CE9B031F26BEED88007A4928 /* APIEndpoints.swift in Sources */,
 				CE9B030426BEC96C007A4928 /* TabBarItem.swift in Sources */,
 				CEA7779D26C06DBB0003D821 /* ListCellConfigurator.swift in Sources */,
@@ -819,6 +835,19 @@
 			productName = Kingfisher;
 		};
 /* End XCSwiftPackageProductDependency section */
+
+/* Begin XCVersionGroup section */
+		CEA777AC26C0981D0003D821 /* Images.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				CEA777AD26C0981D0003D821 /* Images.xcdatamodel */,
+			);
+			currentVersion = CEA777AD26C0981D0003D821 /* Images.xcdatamodel */;
+			path = Images.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = CE5E480C26BE39DE00AB7FC9 /* Project object */;
 }

@@ -43,7 +43,6 @@ public final class NetworkServiceDefault{
     
     private func request(request: URLRequest, completion: @escaping CompletionHandler) {
         sessionManager.request(request) { data, response, requestError in
-            print(data, response, requestError)
                 if let requestError = requestError {
                     var error: NetworkError
                     if let response = response as? HTTPURLResponse {

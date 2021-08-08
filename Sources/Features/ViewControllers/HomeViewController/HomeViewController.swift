@@ -76,6 +76,12 @@ final class HomeViewController: UIViewController {
         collectionView.setCollectionViewLayout(layout, animated: false)
         collectionView.dataSource = dataSource
     }
+    
+    // MARK: - Actions
+    
+    override func didMarkFavorite(with image: Image) {
+        
+    }
 }
 
 // MARK: ScrollViewDelegate
