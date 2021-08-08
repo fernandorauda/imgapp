@@ -62,4 +62,22 @@ final class Paginator<Model> {
             })
             .toVoid()
     }
+    
+    // MARK: Computed Properties
+
+    var page: Int {
+        state.currentPage
+    }
+
+    var models: [Model] {
+        store.value
+    }
+
+    var isLoading: Bool {
+        state.isLoading
+    }
+
+    var isEmpty: Bool {
+        state.isEmpty
+    }
 }

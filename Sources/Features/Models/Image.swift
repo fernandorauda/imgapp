@@ -7,7 +7,7 @@
 
 import Foundation
 
-struct Image: Decodable {
+class Image: NSObject, Decodable {
     let id: String?
     let likes: Int?
     let urls: Url?

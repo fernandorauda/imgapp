@@ -15,5 +15,6 @@ final class RepositoryAssembly: Assembly {
             ImagesRepositoryDefault(dataConvert: resolver ~> (DataConvertServiceDefault.self))
         }
 
+        container.autoregister(HomeContentFactory.self, initializer: HomeContentFactory.init)
     }
 }

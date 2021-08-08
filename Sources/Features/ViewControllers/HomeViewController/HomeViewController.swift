@@ -41,16 +41,17 @@ final class HomeViewController: UIViewController {
         
         registerCells()
         setupBindings()
-    }
-    
-    override func viewWillAppear(_ animated: Bool) {
+        
+        viewModel.input.restartPagination.onNext(())
         viewModel.input.loadImages.onNext(())
+        collectionView.delegate = self
+
     }
 
     // MARK: - Bindings
 
     private func setupBindings() {
-        viewModel.output.images
+        viewModel.output.sections
             .observe(on: MainScheduler.asyncInstance)
             .subscribe(onNext: { [weak self] sections in
                 self?.getDataSource(sectionType: sections)
@@ -65,16 +66,32 @@ final class HomeViewController: UIViewController {
     // MARK: Configuration
     
     func getDataSource(sectionType: [SectionType]) {
-        let section = sectionType.map { sectionControllerProvider.sectionController(for: $0) }
-        dataSource.sections = section
+        let sections = sectionType.map { sectionControllerProvider.sectionController(for: $0) }
+        dataSource.sections = sections
             
         let layout = UICollectionViewCompositionalLayout { (sectionIndex, environment) -> NSCollectionLayoutSection? in
-                return section[sectionIndex].layoutSection()
+                return sections[sectionIndex].layoutSection()
         }
         
-        collectionView.collectionViewLayout = layout
+        collectionView.setCollectionViewLayout(layout, animated: false)
         collectionView.dataSource = dataSource
-        collectionView.reloadData()
     }
 }
 
+// MARK: ScrollViewDelegate
+
+extension HomeViewController: UICollectionViewDelegate {
+    func scrollViewWillEndDragging(
+        _ scrollView: UIScrollView,
+        withVelocity velocity: CGPoint,
+        targetContentOffset: UnsafeMutablePointer<CGPoint>) {
+
+        let distance = collectionView.distance(
+            targetContentOffsetPointee: targetContentOffset
+        )
+
+        if distance < 300 {
+            viewModel.input.loadImages.onNext(())
+        }
+    }
+}

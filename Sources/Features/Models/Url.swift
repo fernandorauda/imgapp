@@ -11,4 +11,5 @@ struct Url: Decodable {
     let raw: String?
     let regular: String?
     let full: String?
+    let small: String?
 }

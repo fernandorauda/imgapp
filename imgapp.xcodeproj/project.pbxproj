@@ -63,6 +63,8 @@
 		CEA777A226C074D40003D821 /* Paginator.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEA777A126C074D40003D821 /* Paginator.swift */; };
 		CEA777A426C075940003D821 /* PaginatorState.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEA777A326C075940003D821 /* PaginatorState.swift */; };
 		CEA777A626C076B10003D821 /* ObservableType+Void.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEA777A526C076B10003D821 /* ObservableType+Void.swift */; };
+		CEA777A826C07E330003D821 /* UIScrollView+Distance.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEA777A726C07E330003D821 /* UIScrollView+Distance.swift */; };
+		CEA777AA26C092650003D821 /* UIResponder+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEA777A926C092650003D821 /* UIResponder+Extension.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -119,6 +121,8 @@
 		CEA777A126C074D40003D821 /* Paginator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Paginator.swift; sourceTree = "<group>"; };
 		CEA777A326C075940003D821 /* PaginatorState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaginatorState.swift; sourceTree = "<group>"; };
 		CEA777A526C076B10003D821 /* ObservableType+Void.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ObservableType+Void.swift"; sourceTree = "<group>"; };
+		CEA777A726C07E330003D821 /* UIScrollView+Distance.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIScrollView+Distance.swift"; sourceTree = "<group>"; };
+		CEA777A926C092650003D821 /* UIResponder+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIResponder+Extension.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -257,6 +261,8 @@
 				CEA7778D26C0373D0003D821 /* UIImageView+Fetch.swift */,
 				CEA7778F26C042F80003D821 /* UILabel+Shadow.swift */,
 				CEA777A526C076B10003D821 /* ObservableType+Void.swift */,
+				CEA777A726C07E330003D821 /* UIScrollView+Distance.swift */,
+				CEA777A926C092650003D821 /* UIResponder+Extension.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -508,9 +514,11 @@
 				CE9B031B26BEEBC4007A4928 /* UrlConfiguration.swift in Sources */,
 				CE9B035126BF7CC4007A4928 /* Cell.swift in Sources */,
 				CE9B033A26BF2D9C007A4928 /* ViewControllerAssembly.swift in Sources */,
+				CEA777A826C07E330003D821 /* UIScrollView+Distance.swift in Sources */,
 				CE9B033826BF2C7C007A4928 /* ViewModelAssembly.swift in Sources */,
 				CE9B034026BF30BB007A4928 /* RepositoryAssembler.swift in Sources */,
 				CEA7779026C042F80003D821 /* UILabel+Shadow.swift in Sources */,
+				CEA777AA26C092650003D821 /* UIResponder+Extension.swift in Sources */,
 				CEA7779B26C06D590003D821 /* HomeSectionProvider.swift in Sources */,
 				CEA7779526C06CD30003D821 /* HomeSectionViewModel.swift in Sources */,
 				CE9B031526BEE736007A4928 /* Image.swift in Sources */,

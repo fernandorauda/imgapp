@@ -46,6 +46,7 @@ final class ImageCollectionViewCell: UICollectionViewCell {
         button.setImage(UIImage(named: "ico_like"), for: .normal)
         button.tintColor = .white
         button.translatesAutoresizingMaskIntoConstraints = false
+        button.addTarget(self, action: #selector(favoriteAction), for: .touchUpInside)
         return button
     }()
     
@@ -59,6 +60,10 @@ final class ImageCollectionViewCell: UICollectionViewCell {
         label.translatesAutoresizingMaskIntoConstraints = false
         return label
     }()
+    
+    // MARK: - Components
+    
+    var viewModel: ImageCellViewModel!
 
     // MARK: Initializacion
 
@@ -121,11 +126,18 @@ final class ImageCollectionViewCell: UICollectionViewCell {
         nameUserLabel.text = nameUser
         numberOfLikesLabel.text = likes
     }
+    
+    // MARK: - Actions
+    
+    @objc private func favoriteAction() {
+        next?.didMarkFavorite(with: viewModel.image)
+    }
 }
 
 extension ImageCollectionViewCell: CellBindable {
     func bindViewModel(_ viewModel: Any) {
         guard let viewModel = viewModel as? ImageCellViewModel else { return }
+        self.viewModel = viewModel
         configure(
             url: viewModel.imageUrl,
             profileUrl: viewModel.profileUrl,

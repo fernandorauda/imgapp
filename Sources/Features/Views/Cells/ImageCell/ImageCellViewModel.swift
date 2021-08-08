@@ -15,7 +15,7 @@ final class ImageCellViewModel: CollectionCellViewModel {
     }
     
     var imageUrl: String? {
-        image.urls?.full
+        image.urls?.small
     }
     
     var profileUrl: String? {
