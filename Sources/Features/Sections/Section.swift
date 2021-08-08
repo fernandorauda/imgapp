@@ -9,7 +9,7 @@ import UIKit
 
 protocol Section {
     func numberOfItems() -> Int
-    //func layoutSection() -> UICollectionViewCompositionalLayout
+    func layoutSection() -> NSCollectionLayoutSection
     func configureCell(collectionView: UICollectionView, indexPath: IndexPath) -> UICollectionViewCell
 }
 
@@ -33,53 +33,57 @@ extension SectionType {
 
 protocol SectionControllerProvider {
     func sectionController(for section: SectionType) -> Section
-    func layoutSection() -> UICollectionViewCompositionalLayout
 }
 
 final class ImagesSectionControllerProvider: SectionControllerProvider {
     func sectionController(for section: SectionType) -> Section {
         switch section {
         case let .images(viewModel):
-            guard let viewModel = viewModel as? ImagesSectionViewModel<ImageCellViewModel> else { return NSObject() as! Section }
-            return ImagesSection<ImageCellViewModel>(
-                cellConfigurator: ListCellConfigurator(cellClass: ImageCollectionViewCell.self), viewModel: viewModel)
+            guard let viewModel = viewModel as? HomeSectionViewModel<ImageCellViewModel> else { return NSObject() as! Section }
+            return HomeSection<ImageCellViewModel>(
+                cellConfigurator: ListCellConfigurator(cellClass: ImageCollectionViewCell.self, layout: homeSectionLayout()), viewModel: viewModel)
         }
     }
     
-    func layoutSection() -> UICollectionViewCompositionalLayout {
+    func homeSectionLayout() -> NSCollectionLayoutSection {
         let inset: CGFloat = 8
         
-        // Items
-        let largeItemSize = NSCollectionLayoutSize(widthDimension: .fractionalWidth(0.5), heightDimension: .fractionalHeight(1))
+        // Image full width
+        let fullItemSize = NSCollectionLayoutSize(widthDimension: .fractionalWidth(1), heightDimension: .fractionalHeight(0.25))
+        let fullItem = NSCollectionLayoutItem(layoutSize: fullItemSize)
+        fullItem.contentInsets = NSDirectionalEdgeInsets(top: inset, leading: inset, bottom: inset, trailing: inset)
+        
+        // Medium image
+        let largeItemSize = NSCollectionLayoutSize(widthDimension: .fractionalWidth(1), heightDimension: .fractionalHeight(0.5))
         let largeItem = NSCollectionLayoutItem(layoutSize: largeItemSize)
         largeItem.contentInsets = NSDirectionalEdgeInsets(top: inset, leading: inset, bottom: inset, trailing: inset)
         
-        let smallItemSize = NSCollectionLayoutSize(widthDimension: .fractionalWidth(1), heightDimension: .fractionalHeight(0.5))
+        // Smaller image
+        let smallItemSize = NSCollectionLayoutSize(widthDimension: .fractionalWidth(1), heightDimension: .fractionalHeight(0.33))
         let smallItem = NSCollectionLayoutItem(layoutSize: smallItemSize)
         smallItem.contentInsets = NSDirectionalEdgeInsets(top: inset, leading: inset, bottom: inset, trailing: inset)
         
-        // Nested Group
-        let nestedGroupSize = NSCollectionLayoutSize(widthDimension: .fractionalWidth(0.25), heightDimension: .fractionalHeight(1))
+        // Smaller images group
+        let nestedGroupSize = NSCollectionLayoutSize(widthDimension: .fractionalWidth(0.5), heightDimension: .fractionalHeight(1))
         let nestedGroup = NSCollectionLayoutGroup.vertical(layoutSize: nestedGroupSize, subitems: [smallItem])
         
-        // Outer Group
-        let outerGroupSize = NSCollectionLayoutSize(widthDimension: .fractionalWidth(1), heightDimension: .fractionalWidth(1))
-        let outerGroup = NSCollectionLayoutGroup.horizontal(layoutSize: outerGroupSize, subitems: [largeItem, nestedGroup, nestedGroup])
+        // Medium Image group
+        let nestedLargeGroupSize = NSCollectionLayoutSize(widthDimension: .fractionalWidth(0.5), heightDimension: .fractionalHeight(1))
+        let nestedLargeGroup = NSCollectionLayoutGroup.vertical(layoutSize: nestedLargeGroupSize, subitems: [largeItem])
         
-        let outerReverseGroup = NSCollectionLayoutGroup.horizontal(layoutSize: outerGroupSize, subitems: [nestedGroup, nestedGroup, largeItem])
+        // Medium and small image group
+        let outerGroupSize = NSCollectionLayoutSize(widthDimension: .fractionalWidth(1), heightDimension: .fractionalHeight(0.75))
+        let outerGroup = NSCollectionLayoutGroup.horizontal(layoutSize: outerGroupSize, subitems: [nestedLargeGroup, nestedGroup])
         
-        let finalOuterGroup = NSCollectionLayoutGroup.horizontal(layoutSize: outerGroupSize, subitems: [outerGroup, outerReverseGroup])
+        // Full width image and outerGroup group
+        let finalOuterGroupSize = NSCollectionLayoutSize(widthDimension: .fractionalWidth(1), heightDimension: .fractionalWidth(2))
+        let finalOuterGroup = NSCollectionLayoutGroup.vertical(layoutSize: finalOuterGroupSize, subitems: [fullItem, outerGroup])
         
         // Section
-        let section = NSCollectionLayoutSection(group: outerGroup)
+        let section = NSCollectionLayoutSection(group: finalOuterGroup)
         section.contentInsets = NSDirectionalEdgeInsets(top: inset, leading: inset, bottom: inset, trailing: inset)
         
-        // Supplementary Item
-        let headerItemSize = NSCollectionLayoutSize(widthDimension: .fractionalWidth(1), heightDimension: .estimated(0))
-        let headerItem = NSCollectionLayoutBoundarySupplementaryItem(layoutSize: headerItemSize, elementKind: "header", alignment: .top)
-        section.boundarySupplementaryItems = [headerItem]
-        
-        return UICollectionViewCompositionalLayout(section: section)
+        return section
     }
 }
 
@@ -93,9 +97,9 @@ final class HomeContentFactory {
         return sections
     }
     
-    private func getImageListSection(images: [Image]) -> ImagesSectionViewModel<ImageCellViewModel> {
-        let cellViewModels = images.map { _ in ImageCellViewModel() }
-        let imageList = ImagesSectionViewModel(viewModels: cellViewModels)
+    private func getImageListSection(images: [Image]) -> HomeSectionViewModel<ImageCellViewModel> {
+        let cellViewModels = images.map { ImageCellViewModel(image: $0) }
+        let imageList = HomeSectionViewModel<ImageCellViewModel>(viewModels: cellViewModels)
         return imageList
     }
 }

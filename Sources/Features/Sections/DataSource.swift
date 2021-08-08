@@ -8,7 +8,7 @@
 import UIKit
 
 class DataSource: NSObject, UICollectionViewDataSource {
-    let sections: [Section]
+    var sections: [Section]
     
     init(sections: [Section]) {
         self.sections = sections

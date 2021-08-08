@@ -10,7 +10,7 @@ import Foundation
 struct Image: Decodable {
     let id: String?
     let likes: Int?
-    let url: Url?
+    let urls: Url?
     let user: User?
 }
 

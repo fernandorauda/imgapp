@@ -43,6 +43,9 @@ final class HomeViewController: UIViewController {
         collectionView.register(ImageCollectionViewCell.self, forCellWithReuseIdentifier: String(describing:ImageCollectionViewCell.self))
         
         setupBindings()
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
         viewModel.input.loadImages.onNext(())
     }
 
@@ -60,13 +63,13 @@ final class HomeViewController: UIViewController {
     
     func getDataSource(sectionType: [SectionType]) {
         let section = sectionType.map { sectionControllerProvider.sectionController(for: $0) }
-        dataSource = DataSource(sections: section)
+        dataSource.sections = section
             
-//        let layout = UICollectionViewCompositionalLayout { (sectionIndex, environment) -> NSCollectionLayoutSection? in
-//                return section[sectionIndex].layoutSection()
-//        }
+        let layout = UICollectionViewCompositionalLayout { (sectionIndex, environment) -> NSCollectionLayoutSection? in
+                return section[sectionIndex].layoutSection()
+        }
         
-        collectionView.collectionViewLayout = sectionControllerProvider.layoutSection()
+        collectionView.collectionViewLayout = layout
         collectionView.dataSource = dataSource
         collectionView.reloadData()
     }
