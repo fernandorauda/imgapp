@@ -10,7 +10,7 @@ import RxCocoa
 import RxSwift
 
 protocol HomeFetcher {
-    func fetch() -> Observable<[Image]?>
+    func fetch(with criteria: ImagesRequestDTO) -> Observable<[Image]>
 }
 
 struct HomeFetcherDefault: HomeFetcher {
@@ -21,7 +21,7 @@ struct HomeFetcherDefault: HomeFetcher {
         self.imageRepository = imageRepository
     }
     
-    func fetch() -> Observable<[Image]?> {
-        imageRepository.fetchImagesList()
+    func fetch(with criteria: ImagesRequestDTO) -> Observable<[Image]> {
+        imageRepository.fetchImagesList(with: criteria)
     }
 }

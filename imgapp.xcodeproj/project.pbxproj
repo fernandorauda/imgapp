@@ -61,6 +61,8 @@
 		CEA7779D26C06DBB0003D821 /* ListCellConfigurator.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEA7779C26C06DBB0003D821 /* ListCellConfigurator.swift */; };
 		CEA7779F26C070820003D821 /* LoadingCellViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEA7779E26C070820003D821 /* LoadingCellViewModel.swift */; };
 		CEA777A226C074D40003D821 /* Paginator.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEA777A126C074D40003D821 /* Paginator.swift */; };
+		CEA777A426C075940003D821 /* PaginatorState.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEA777A326C075940003D821 /* PaginatorState.swift */; };
+		CEA777A626C076B10003D821 /* ObservableType+Void.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEA777A526C076B10003D821 /* ObservableType+Void.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -115,6 +117,8 @@
 		CEA7779C26C06DBB0003D821 /* ListCellConfigurator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListCellConfigurator.swift; sourceTree = "<group>"; };
 		CEA7779E26C070820003D821 /* LoadingCellViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingCellViewModel.swift; sourceTree = "<group>"; };
 		CEA777A126C074D40003D821 /* Paginator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Paginator.swift; sourceTree = "<group>"; };
+		CEA777A326C075940003D821 /* PaginatorState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaginatorState.swift; sourceTree = "<group>"; };
+		CEA777A526C076B10003D821 /* ObservableType+Void.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ObservableType+Void.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -252,6 +256,7 @@
 				CE9B02F226BEBD11007A4928 /* Optional+Unwrap.swift */,
 				CEA7778D26C0373D0003D821 /* UIImageView+Fetch.swift */,
 				CEA7778F26C042F80003D821 /* UILabel+Shadow.swift */,
+				CEA777A526C076B10003D821 /* ObservableType+Void.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -410,6 +415,7 @@
 			isa = PBXGroup;
 			children = (
 				CEA777A126C074D40003D821 /* Paginator.swift */,
+				CEA777A326C075940003D821 /* PaginatorState.swift */,
 			);
 			path = Utils;
 			sourceTree = "<group>";
@@ -510,6 +516,7 @@
 				CE9B031526BEE736007A4928 /* Image.swift in Sources */,
 				CE9B035326BF7E50007A4928 /* HomeSection.swift in Sources */,
 				CE9B034F26BF7C87007A4928 /* ImageCellViewModel.swift in Sources */,
+				CEA777A626C076B10003D821 /* ObservableType+Void.swift in Sources */,
 				CEA7779926C06D2E0003D821 /* HomeSectionFactory.swift in Sources */,
 				CE9B033626BF28BE007A4928 /* HomeViewModel.swift in Sources */,
 				CE5E481C26BE39DE00AB7FC9 /* HomeViewController.swift in Sources */,
@@ -533,6 +540,7 @@
 				CE9B032D26BEF9F3007A4928 /* ImageRepository.swift in Sources */,
 				CE9B031226BEE63F007A4928 /* ImagesRequestDTO.swift in Sources */,
 				CE9B033E26BF3093007A4928 /* FetcherAssembly.swift in Sources */,
+				CEA777A426C075940003D821 /* PaginatorState.swift in Sources */,
 				CE9B030B26BECF9A007A4928 /* LikesViewController.swift in Sources */,
 				CE9B032F26BF1098007A4928 /* ImageResponseDTO.swift in Sources */,
 				CE9B033C26BF3029007A4928 /* NetworkAssembly.swift in Sources */,

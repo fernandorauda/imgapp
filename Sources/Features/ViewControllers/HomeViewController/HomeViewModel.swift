@@ -36,8 +36,15 @@ struct HomeViewModelDefault: HomeViewModel {
     init(homeFetcher: HomeFetcher) {
         self.homeFetcher = homeFetcher
         
+        let paginator = Paginator<Image> { page in
+            let criteria = ImagesRequestDTO(page: page, perPage: 10)
+            return homeFetcher.fetch(with: criteria)
+        }
+        
         let loadImages = PublishSubject<Void>()
         input = .init(loadImages: loadImages)
+        
+        
         
         let imagesResult = input.loadImages
             .flatMapLatest { [homeFetcher, factory] _ -> Observable<[SectionType]> in
