@@ -12,8 +12,10 @@ final class ViewControllerAssembly: Assembly {
     func assemble(container: Container) {
 
         container.register(HomeViewController.self) { resolver in
-            HomeViewController(viewModel: resolver ~> (HomeViewModelDefault.self))
+            HomeViewController(viewModel: resolver ~> (HomeViewModelDefault.self), sectionControllerProvider: resolver ~> (ImagesSectionControllerProvider.self))
         }
+        
+        container.autoregister(ImagesSectionControllerProvider.self, initializer: ImagesSectionControllerProvider.init)
 
     }
 }

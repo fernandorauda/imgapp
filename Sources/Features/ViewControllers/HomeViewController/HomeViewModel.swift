@@ -13,7 +13,7 @@ struct HomeViewModelInput {
 }
 
 struct HomeViewModelOutput {
-    let images: Observable<[Image]?>
+    let images: Observable<[SectionType]>
 }
 
 protocol HomeViewModel {
@@ -29,6 +29,8 @@ struct HomeViewModelDefault: HomeViewModel {
     let input: Input
     let output: Output
     
+    let factory = HomeContentFactory()
+    
     private let homeFetcher: HomeFetcher
     
     init(homeFetcher: HomeFetcher) {
@@ -38,8 +40,10 @@ struct HomeViewModelDefault: HomeViewModel {
         input = .init(loadImages: loadImages)
         
         let imagesResult = input.loadImages
-            .flatMapLatest { [homeFetcher] _ -> Observable<[Image]?> in
-                homeFetcher.fetch()
+            .flatMapLatest { [homeFetcher, factory] _ -> Observable<[SectionType]> in
+                homeFetcher.fetch().map { images -> [SectionType] in
+                    factory.sections(images: images ?? [])
+                }
             }
         
         output = .init(images: imagesResult)

@@ -10,6 +10,7 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="HomeViewController" customModule="imgapp" customModuleProvider="target">
             <connections>
+                <outlet property="collectionView" destination="myQ-F4-xr7" id="cyt-td-U2v"/>
                 <outlet property="view" destination="iN0-l3-epB" id="7Fo-ok-lVr"/>
             </connections>
         </placeholder>

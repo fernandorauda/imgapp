@@ -24,7 +24,7 @@ final class ImagesRepositoryDefault: ImageRepository {
     
     func fetchImagesList() -> Observable<[Image]?> {
         Observable.create { [dataConvert] observer in
-            let requestDTO = ImagesRequestDTO(page: 1, perPage: 10)
+            let requestDTO = ImagesRequestDTO(page: 1, perPage: 50)
             let endpoint = APIEndpoints.getImages(with: requestDTO)
 
             dataConvert.request(with: endpoint) { result in

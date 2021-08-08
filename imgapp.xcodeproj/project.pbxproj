@@ -45,6 +45,12 @@
 		CE9B033C26BF3029007A4928 /* NetworkAssembly.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE9B033B26BF3029007A4928 /* NetworkAssembly.swift */; };
 		CE9B033E26BF3093007A4928 /* FetcherAssembly.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE9B033D26BF3093007A4928 /* FetcherAssembly.swift */; };
 		CE9B034026BF30BB007A4928 /* RepositoryAssembler.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE9B033F26BF30BB007A4928 /* RepositoryAssembler.swift */; };
+		CE9B034526BF7A74007A4928 /* Section.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE9B034426BF7A74007A4928 /* Section.swift */; };
+		CE9B034D26BF7C74007A4928 /* ImageCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE9B034C26BF7C74007A4928 /* ImageCollectionViewCell.swift */; };
+		CE9B034F26BF7C87007A4928 /* ImageCellViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE9B034E26BF7C87007A4928 /* ImageCellViewModel.swift */; };
+		CE9B035126BF7CC4007A4928 /* Cell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE9B035026BF7CC4007A4928 /* Cell.swift */; };
+		CE9B035326BF7E50007A4928 /* ImagesSection.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE9B035226BF7E50007A4928 /* ImagesSection.swift */; };
+		CE9B035526BF8140007A4928 /* DataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE9B035426BF8140007A4928 /* DataSource.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -84,6 +90,12 @@
 		CE9B033B26BF3029007A4928 /* NetworkAssembly.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkAssembly.swift; sourceTree = "<group>"; };
 		CE9B033D26BF3093007A4928 /* FetcherAssembly.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FetcherAssembly.swift; sourceTree = "<group>"; };
 		CE9B033F26BF30BB007A4928 /* RepositoryAssembler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepositoryAssembler.swift; sourceTree = "<group>"; };
+		CE9B034426BF7A74007A4928 /* Section.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Section.swift; sourceTree = "<group>"; };
+		CE9B034C26BF7C74007A4928 /* ImageCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageCollectionViewCell.swift; sourceTree = "<group>"; };
+		CE9B034E26BF7C87007A4928 /* ImageCellViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageCellViewModel.swift; sourceTree = "<group>"; };
+		CE9B035026BF7CC4007A4928 /* Cell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Cell.swift; sourceTree = "<group>"; };
+		CE9B035226BF7E50007A4928 /* ImagesSection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImagesSection.swift; sourceTree = "<group>"; };
+		CE9B035426BF8140007A4928 /* DataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataSource.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -176,6 +188,9 @@
 		CE9B02EB26BEB951007A4928 /* Features */ = {
 			isa = PBXGroup;
 			children = (
+				CE9B035626BF981C007A4928 /* Factory */,
+				CE9B034926BF7C49007A4928 /* Views */,
+				CE9B034626BF7AA0007A4928 /* Sections */,
 				CE9B033226BF27EF007A4928 /* Services */,
 				CE9B032B26BEF9D9007A4928 /* Repositories */,
 				CE9B031326BEE71E007A4928 /* Models */,
@@ -255,6 +270,7 @@
 				CE9B033526BF28BE007A4928 /* HomeViewModel.swift */,
 				CE5E481B26BE39DE00AB7FC9 /* HomeViewController.swift */,
 				CE9B030726BECEE1007A4928 /* HomeViewController.xib */,
+				CE9B035226BF7E50007A4928 /* ImagesSection.swift */,
 			);
 			path = HomeViewController;
 			sourceTree = "<group>";
@@ -301,6 +317,48 @@
 				CE9B033326BF2812007A4928 /* HomeFetcher.swift */,
 			);
 			path = Services;
+			sourceTree = "<group>";
+		};
+		CE9B034626BF7AA0007A4928 /* Sections */ = {
+			isa = PBXGroup;
+			children = (
+				CE9B034426BF7A74007A4928 /* Section.swift */,
+				CE9B035026BF7CC4007A4928 /* Cell.swift */,
+				CE9B035426BF8140007A4928 /* DataSource.swift */,
+			);
+			path = Sections;
+			sourceTree = "<group>";
+		};
+		CE9B034926BF7C49007A4928 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				CE9B034A26BF7C50007A4928 /* Cells */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		CE9B034A26BF7C50007A4928 /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				CE9B034B26BF7C57007A4928 /* ImageCell */,
+			);
+			path = Cells;
+			sourceTree = "<group>";
+		};
+		CE9B034B26BF7C57007A4928 /* ImageCell */ = {
+			isa = PBXGroup;
+			children = (
+				CE9B034C26BF7C74007A4928 /* ImageCollectionViewCell.swift */,
+				CE9B034E26BF7C87007A4928 /* ImageCellViewModel.swift */,
+			);
+			path = ImageCell;
+			sourceTree = "<group>";
+		};
+		CE9B035626BF981C007A4928 /* Factory */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Factory;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -387,15 +445,20 @@
 			files = (
 				CE9B02FC26BEBDFD007A4928 /* Injector.swift in Sources */,
 				CE9B031B26BEEBC4007A4928 /* UrlConfiguration.swift in Sources */,
+				CE9B035126BF7CC4007A4928 /* Cell.swift in Sources */,
 				CE9B033A26BF2D9C007A4928 /* ViewControllerAssembly.swift in Sources */,
 				CE9B033826BF2C7C007A4928 /* ViewModelAssembly.swift in Sources */,
 				CE9B034026BF30BB007A4928 /* RepositoryAssembler.swift in Sources */,
 				CE9B031526BEE736007A4928 /* Image.swift in Sources */,
+				CE9B035326BF7E50007A4928 /* ImagesSection.swift in Sources */,
+				CE9B034F26BF7C87007A4928 /* ImageCellViewModel.swift in Sources */,
 				CE9B033626BF28BE007A4928 /* HomeViewModel.swift in Sources */,
 				CE5E481C26BE39DE00AB7FC9 /* HomeViewController.swift in Sources */,
 				CE9B032126BEF13A007A4928 /* NetworkService.swift in Sources */,
+				CE9B034526BF7A74007A4928 /* Section.swift in Sources */,
 				CE9B030F26BED356007A4928 /* CoordinatorAssembly.swift in Sources */,
 				CE9B033426BF2812007A4928 /* HomeFetcher.swift in Sources */,
+				CE9B034D26BF7C74007A4928 /* ImageCollectionViewCell.swift in Sources */,
 				CE5E481826BE39DE00AB7FC9 /* AppDelegate.swift in Sources */,
 				CE9B032326BEF2DB007A4928 /* DataTransferService.swift in Sources */,
 				CE9B033126BF148E007A4928 /* NetworkConfigurable.swift in Sources */,
@@ -410,6 +473,7 @@
 				CE9B030B26BECF9A007A4928 /* LikesViewController.swift in Sources */,
 				CE9B032F26BF1098007A4928 /* ImageResponseDTO.swift in Sources */,
 				CE9B033C26BF3029007A4928 /* NetworkAssembly.swift in Sources */,
+				CE9B035526BF8140007A4928 /* DataSource.swift in Sources */,
 				CE9B02F026BEBCE1007A4928 /* Coordinator.swift in Sources */,
 				CE9B031F26BEED88007A4928 /* APIEndpoints.swift in Sources */,
 				CE9B030426BEC96C007A4928 /* TabBarItem.swift in Sources */,
