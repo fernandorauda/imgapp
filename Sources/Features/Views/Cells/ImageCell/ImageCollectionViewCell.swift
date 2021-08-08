@@ -34,8 +34,27 @@ class ImageCollectionViewCell: UICollectionViewCell {
     private lazy var nameUserLabel: UILabel = {
         let label = UILabel()
         label.shadow()
-        label.textColor = .white
         label.numberOfLines = 2
+        label.textColor = .white
+        label.font = UIFont(name: "HelveticaNeue-Medium", size: 12)
+        label.translatesAutoresizingMaskIntoConstraints = false
+        return label
+    }()
+    
+    private lazy var favoriteButton: UIButton = {
+        let button = UIButton(type: .system)
+        button.setImage(UIImage(named: "ico_like"), for: .normal)
+        button.tintColor = .white
+        button.translatesAutoresizingMaskIntoConstraints = false
+        return button
+    }()
+    
+    private lazy var numberOfLikesLabel: UILabel = {
+        let label = UILabel()
+        label.shadow()
+        label.numberOfLines = 1
+        label.textColor = .white
+        label.textAlignment = .right
         label.font = UIFont(name: "HelveticaNeue-Medium", size: 12)
         label.translatesAutoresizingMaskIntoConstraints = false
         return label
@@ -55,10 +74,18 @@ class ImageCollectionViewCell: UICollectionViewCell {
         initialized()
     }
     
+    override func prepareForReuse() {
+        imageView.image = nil
+        nameUserLabel.text = nil
+        profileImage.image = nil
+    }
+    
     private func initialized() {
         contentView.addSubview(imageView)
         contentView.addSubview(profileImage)
         contentView.addSubview(nameUserLabel)
+        contentView.addSubview(favoriteButton)
+        contentView.addSubview(numberOfLikesLabel)
         
         NSLayoutConstraint.activate([
             imageView.topAnchor.constraint(equalTo: topAnchor),
@@ -73,16 +100,26 @@ class ImageCollectionViewCell: UICollectionViewCell {
             
             nameUserLabel.centerYAnchor.constraint(equalTo: profileImage.centerYAnchor),
             nameUserLabel.leftAnchor.constraint(equalTo: profileImage.rightAnchor ,constant: 8),
-            nameUserLabel.rightAnchor.constraint(lessThanOrEqualTo: rightAnchor, constant: -8)
+            nameUserLabel.rightAnchor.constraint(lessThanOrEqualTo: rightAnchor, constant: -8),
+            
+            favoriteButton.bottomAnchor.constraint(equalTo: bottomAnchor, constant: -16),
+            favoriteButton.rightAnchor.constraint(equalTo: rightAnchor, constant: -16),
+            favoriteButton.heightAnchor.constraint(equalToConstant: 22),
+            favoriteButton.widthAnchor.constraint(equalTo: favoriteButton.heightAnchor),
+            
+            numberOfLikesLabel.leftAnchor.constraint(greaterThanOrEqualTo: leftAnchor, constant: 16),
+            numberOfLikesLabel.centerYAnchor.constraint(equalTo: favoriteButton.centerYAnchor),
+            numberOfLikesLabel.rightAnchor.constraint(equalTo: favoriteButton.leftAnchor, constant: -8)
         ])
     }
     
     // MARK: - Configure
     
-    func configure(url: String?, profileUrl: String?, nameUser: String?) {
+    func configure(url: String?, profileUrl: String?, nameUser: String?, likes: String?) {
         imageView.fetchImage(from: url)
         profileImage.fetchImage(from: profileUrl)
         nameUserLabel.text = nameUser
+        numberOfLikesLabel.text = likes
     }
 }
 
@@ -92,7 +129,8 @@ extension ImageCollectionViewCell: CellBindable {
         configure(
             url: viewModel.imageUrl,
             profileUrl: viewModel.profileUrl,
-            nameUser: viewModel.userName
+            nameUser: viewModel.userName,
+            likes: viewModel.likes
         )
     }
 }

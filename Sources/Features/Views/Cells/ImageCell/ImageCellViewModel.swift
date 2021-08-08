@@ -26,4 +26,8 @@ final class ImageCellViewModel: CollectionCellViewModel {
         image.user?.name
     }
     
+    var likes: String? {
+        image.numberOfLikes()
+    }
+    
 }

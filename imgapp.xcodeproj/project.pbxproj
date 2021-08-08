@@ -54,6 +54,7 @@
 		CEA7778C26C036B80003D821 /* Kingfisher in Frameworks */ = {isa = PBXBuildFile; productRef = CEA7778B26C036B80003D821 /* Kingfisher */; };
 		CEA7778E26C0373D0003D821 /* UIImageView+Fetch.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEA7778D26C0373D0003D821 /* UIImageView+Fetch.swift */; };
 		CEA7779026C042F80003D821 /* UILabel+Shadow.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEA7778F26C042F80003D821 /* UILabel+Shadow.swift */; };
+		CEA7779326C06BA40003D821 /* LoadingCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEA7779226C06BA40003D821 /* LoadingCollectionViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -101,6 +102,7 @@
 		CE9B035426BF8140007A4928 /* DataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataSource.swift; sourceTree = "<group>"; };
 		CEA7778D26C0373D0003D821 /* UIImageView+Fetch.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImageView+Fetch.swift"; sourceTree = "<group>"; };
 		CEA7778F26C042F80003D821 /* UILabel+Shadow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UILabel+Shadow.swift"; sourceTree = "<group>"; };
+		CEA7779226C06BA40003D821 /* LoadingCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingCollectionViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -348,6 +350,7 @@
 		CE9B034A26BF7C50007A4928 /* Cells */ = {
 			isa = PBXGroup;
 			children = (
+				CEA7779126C06B7E0003D821 /* LoadingCell */,
 				CE9B034B26BF7C57007A4928 /* ImageCell */,
 			);
 			path = Cells;
@@ -367,6 +370,14 @@
 			children = (
 			);
 			path = Factory;
+			sourceTree = "<group>";
+		};
+		CEA7779126C06B7E0003D821 /* LoadingCell */ = {
+			isa = PBXGroup;
+			children = (
+				CEA7779226C06BA40003D821 /* LoadingCollectionViewCell.swift */,
+			);
+			path = LoadingCell;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -478,6 +489,7 @@
 				CE9B031926BEE82C007A4928 /* User.swift in Sources */,
 				CE9B030226BEC7F8007A4928 /* TabBarCoordinator.swift in Sources */,
 				CE9B02F326BEBD11007A4928 /* Optional+Unwrap.swift in Sources */,
+				CEA7779326C06BA40003D821 /* LoadingCollectionViewCell.swift in Sources */,
 				CE9B031D26BEEC1A007A4928 /* Endpoint.swift in Sources */,
 				CE9B032D26BEF9F3007A4928 /* ImageRepository.swift in Sources */,
 				CE9B031226BEE63F007A4928 /* ImagesRequestDTO.swift in Sources */,
