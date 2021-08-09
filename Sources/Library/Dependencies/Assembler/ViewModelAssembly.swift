@@ -13,7 +13,8 @@ final class ViewModelAssembly: Assembly {
         container.register(HomeViewModelDefault.self) { resolver in
             HomeViewModelDefault(
                 homeFetcher: resolver ~> (HomeFetcherDefault.self),
-                factory: resolver ~> (HomeContentFactory.self)
+                factory: resolver ~> (HomeContentFactory.self),
+                dataEngine: resolver ~> (CoreDataEngine.self)
             )
         }
     }

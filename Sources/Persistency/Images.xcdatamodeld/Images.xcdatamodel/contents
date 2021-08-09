@@ -1,25 +1,13 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="18154" systemVersion="20F71" minimumToolsVersion="Automatic" sourceLanguage="Swift" userDefinedModelVersionIdentifier="">
-    <entity name="ImageEntity" representedClassName="ImageEntity" syncable="YES" codeGenerationType="class">
+    <entity name="ImageEntity" representedClassName="ImageEntity" syncable="YES" codeGenerationType="category">
         <attribute name="id" optional="YES" attributeType="String"/>
+        <attribute name="imageUrl" optional="YES" attributeType="String"/>
         <attribute name="likes" optional="YES" attributeType="Integer 32" defaultValueString="0" usesScalarValueType="YES"/>
-        <relationship name="urls" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="UrlEntity"/>
-        <relationship name="user" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="UserEntity"/>
-    </entity>
-    <entity name="UrlEntity" representedClassName="UrlEntity" syncable="YES" codeGenerationType="class">
-        <attribute name="full" optional="YES" attributeType="String"/>
-        <attribute name="medium" optional="YES" attributeType="String"/>
-        <attribute name="small" optional="YES" attributeType="String"/>
-    </entity>
-    <entity name="UserEntity" representedClassName="UserEntity" syncable="YES" codeGenerationType="class">
-        <attribute name="id" optional="YES" attributeType="String"/>
-        <attribute name="name" optional="YES" attributeType="String"/>
-        <attribute name="username" optional="YES" attributeType="String"/>
-        <relationship name="profileImage" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="UrlEntity"/>
+        <attribute name="userName" optional="YES" attributeType="String"/>
+        <attribute name="userPhoto" optional="YES" attributeType="String"/>
     </entity>
     <elements>
-        <element name="ImageEntity" positionX="-63" positionY="-18" width="128" height="14"/>
-        <element name="UrlEntity" positionX="-54" positionY="9" width="128" height="14"/>
-        <element name="UserEntity" positionX="-36" positionY="18" width="128" height="14"/>
+        <element name="ImageEntity" positionX="-345.2158813476562" positionY="-207.8160705566406" width="128" height="104"/>
     </elements>
 </model>

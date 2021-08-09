@@ -17,7 +17,8 @@ enum Injector {
                 FetcherAssembly(),
                 RepositoryAssembly(),
                 NetworkAssembly(),
-                CoordinatorAssembly()
+                CoordinatorAssembly(),
+                PersistencyAssembly()
             ],
             container: container
         )

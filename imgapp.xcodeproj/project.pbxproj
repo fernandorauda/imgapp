@@ -11,6 +11,8 @@
 		CE5E481C26BE39DE00AB7FC9 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE5E481B26BE39DE00AB7FC9 /* HomeViewController.swift */; };
 		CE5E482126BE39DF00AB7FC9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CE5E482026BE39DF00AB7FC9 /* Assets.xcassets */; };
 		CE5E482426BE39DF00AB7FC9 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CE5E482226BE39DF00AB7FC9 /* LaunchScreen.storyboard */; };
+		CE8764F026C0A8540029D3F4 /* Images.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = CEA777AC26C0981D0003D821 /* Images.xcdatamodeld */; };
+		CE8764F226C0BD8F0029D3F4 /* PersistencyAssembly.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE8764F126C0BD8F0029D3F4 /* PersistencyAssembly.swift */; };
 		CE9B02F026BEBCE1007A4928 /* Coordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE9B02EF26BEBCE1007A4928 /* Coordinator.swift */; };
 		CE9B02F326BEBD11007A4928 /* Optional+Unwrap.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE9B02F226BEBD11007A4928 /* Optional+Unwrap.swift */; };
 		CE9B02F626BEBD6A007A4928 /* Swinject in Frameworks */ = {isa = PBXBuildFile; productRef = CE9B02F526BEBD6A007A4928 /* Swinject */; };
@@ -65,7 +67,6 @@
 		CEA777A626C076B10003D821 /* ObservableType+Void.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEA777A526C076B10003D821 /* ObservableType+Void.swift */; };
 		CEA777A826C07E330003D821 /* UIScrollView+Distance.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEA777A726C07E330003D821 /* UIScrollView+Distance.swift */; };
 		CEA777AA26C092650003D821 /* UIResponder+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEA777A926C092650003D821 /* UIResponder+Extension.swift */; };
-		CEA777AE26C0981D0003D821 /* Images.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = CEA777AC26C0981D0003D821 /* Images.xcdatamodeld */; };
 		CEA777B026C09A610003D821 /* DataEngine.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEA777AF26C09A610003D821 /* DataEngine.swift */; };
 /* End PBXBuildFile section */
 
@@ -76,6 +77,7 @@
 		CE5E482026BE39DF00AB7FC9 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		CE5E482326BE39DF00AB7FC9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		CE5E482526BE39DF00AB7FC9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		CE8764F126C0BD8F0029D3F4 /* PersistencyAssembly.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersistencyAssembly.swift; sourceTree = "<group>"; };
 		CE9B02EF26BEBCE1007A4928 /* Coordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Coordinator.swift; sourceTree = "<group>"; };
 		CE9B02F226BEBD11007A4928 /* Optional+Unwrap.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Optional+Unwrap.swift"; sourceTree = "<group>"; };
 		CE9B02FB26BEBDFD007A4928 /* Injector.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Injector.swift; sourceTree = "<group>"; };
@@ -290,6 +292,7 @@
 				CE9B033B26BF3029007A4928 /* NetworkAssembly.swift */,
 				CE9B033D26BF3093007A4928 /* FetcherAssembly.swift */,
 				CE9B033F26BF30BB007A4928 /* RepositoryAssembler.swift */,
+				CE8764F126C0BD8F0029D3F4 /* PersistencyAssembly.swift */,
 			);
 			path = Assembler;
 			sourceTree = "<group>";
@@ -527,11 +530,11 @@
 				CE9B02FC26BEBDFD007A4928 /* Injector.swift in Sources */,
 				CE9B031B26BEEBC4007A4928 /* UrlConfiguration.swift in Sources */,
 				CE9B035126BF7CC4007A4928 /* Cell.swift in Sources */,
+				CE8764F026C0A8540029D3F4 /* Images.xcdatamodeld in Sources */,
 				CE9B033A26BF2D9C007A4928 /* ViewControllerAssembly.swift in Sources */,
 				CEA777A826C07E330003D821 /* UIScrollView+Distance.swift in Sources */,
 				CE9B033826BF2C7C007A4928 /* ViewModelAssembly.swift in Sources */,
 				CE9B034026BF30BB007A4928 /* RepositoryAssembler.swift in Sources */,
-				CEA777AE26C0981D0003D821 /* Images.xcdatamodeld in Sources */,
 				CEA7779026C042F80003D821 /* UILabel+Shadow.swift in Sources */,
 				CEA777AA26C092650003D821 /* UIResponder+Extension.swift in Sources */,
 				CEA7779B26C06D590003D821 /* HomeSectionProvider.swift in Sources */,
@@ -553,6 +556,7 @@
 				CE9B032326BEF2DB007A4928 /* DataTransferService.swift in Sources */,
 				CE9B033126BF148E007A4928 /* NetworkConfigurable.swift in Sources */,
 				CE9B031726BEE788007A4928 /* Url.swift in Sources */,
+				CE8764F226C0BD8F0029D3F4 /* PersistencyAssembly.swift in Sources */,
 				CE9B031926BEE82C007A4928 /* User.swift in Sources */,
 				CE9B030226BEC7F8007A4928 /* TabBarCoordinator.swift in Sources */,
 				CEA7779F26C070820003D821 /* LoadingCellViewModel.swift in Sources */,

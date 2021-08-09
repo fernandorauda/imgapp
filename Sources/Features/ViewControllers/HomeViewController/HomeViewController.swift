@@ -56,6 +56,12 @@ final class HomeViewController: UIViewController {
             .subscribe(onNext: { [weak self] sections in
                 self?.getDataSource(sectionType: sections)
             }).disposed(by: disposeBag)
+        
+        viewModel.output.favorite
+            .observe(on: MainScheduler.asyncInstance)
+            .subscribe(onNext: { _ in
+                
+            }).disposed(by: disposeBag)
     }
     
     private func registerCells() {
@@ -80,7 +86,7 @@ final class HomeViewController: UIViewController {
     // MARK: - Actions
     
     override func didMarkFavorite(with image: Image) {
-        
+        viewModel.input.sendFavorite.onNext(image)
     }
 }
 
