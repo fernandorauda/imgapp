@@ -18,6 +18,7 @@ class ImageViewController: UIViewController {
     @IBOutlet weak var dateLabel: UILabel!
     @IBOutlet weak var imageView: UIImageView!
     @IBOutlet weak var contentView: UIView!
+    @IBOutlet weak var activityIndicator: UIActivityIndicatorView!
     
     // MARK: - Properties
 
@@ -96,6 +97,7 @@ class ImageViewController: UIViewController {
     
     func endLoadContent() {
         contentView.isHidden = false
+        activityIndicator.stopAnimating()
     }
     
     @IBAction func exitAction(_ sender: UIButton) {

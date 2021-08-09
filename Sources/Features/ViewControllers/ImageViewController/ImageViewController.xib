@@ -9,6 +9,7 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="ImageViewController" customModule="imgapp" customModuleProvider="target">
             <connections>
+                <outlet property="activityIndicator" destination="rLJ-Te-Xsf" id="jdp-pG-Tr2"/>
                 <outlet property="contentView" destination="fhJ-bI-PtZ" id="FkI-B8-gJG"/>
                 <outlet property="dateLabel" destination="5DS-UG-4th" id="2q1-B4-PV8"/>
                 <outlet property="descriptionLabel" destination="79b-G3-Ur6" id="iQU-ks-SKF"/>
@@ -40,7 +41,7 @@
                         <constraint firstAttribute="bottom" secondItem="stH-Lb-sB2" secondAttribute="bottom" id="pCl-nO-Rrf"/>
                     </constraints>
                 </scrollView>
-                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="fhJ-bI-PtZ">
+                <view userInteractionEnabled="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="fhJ-bI-PtZ">
                     <rect key="frame" x="0.0" y="746" width="414" height="116"/>
                     <subviews>
                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tHn-ic-DdC">
@@ -89,6 +90,9 @@
                         <constraint firstItem="tHn-ic-DdC" firstAttribute="leading" secondItem="fhJ-bI-PtZ" secondAttribute="leading" constant="16" id="za0-Qt-FCD"/>
                     </constraints>
                 </view>
+                <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" animating="YES" style="large" translatesAutoresizingMaskIntoConstraints="NO" id="rLJ-Te-Xsf">
+                    <rect key="frame" x="188.5" y="429.5" width="37" height="37"/>
+                </activityIndicatorView>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kxB-CN-h8V">
                     <rect key="frame" x="16" y="60" width="44" height="44"/>
                     <constraints>
@@ -108,11 +112,13 @@
                 <constraint firstItem="vUN-kp-3ea" firstAttribute="bottom" secondItem="fhJ-bI-PtZ" secondAttribute="bottom" id="0Iz-dJ-6on"/>
                 <constraint firstItem="dOD-Rw-tGE" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" id="4eb-1P-quZ"/>
                 <constraint firstItem="kxB-CN-h8V" firstAttribute="top" secondItem="vUN-kp-3ea" secondAttribute="top" constant="16" id="75Z-Kx-xIG"/>
+                <constraint firstItem="rLJ-Te-Xsf" firstAttribute="centerY" secondItem="iN0-l3-epB" secondAttribute="centerY" id="A9R-x7-6nD"/>
                 <constraint firstAttribute="bottom" secondItem="dOD-Rw-tGE" secondAttribute="bottom" id="Dlr-zH-act"/>
                 <constraint firstItem="fhJ-bI-PtZ" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" id="HD4-lz-YeX"/>
                 <constraint firstItem="kxB-CN-h8V" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="16" id="JdE-Uy-PBp"/>
                 <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="fhJ-bI-PtZ" secondAttribute="trailing" id="pW4-3w-TQu"/>
                 <constraint firstItem="dOD-Rw-tGE" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="rhb-YU-CRt"/>
+                <constraint firstItem="rLJ-Te-Xsf" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="rpe-uQ-OfV"/>
                 <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="dOD-Rw-tGE" secondAttribute="trailing" id="ykr-Vo-onw"/>
             </constraints>
             <point key="canvasLocation" x="137.68115942028987" y="152.67857142857142"/>
