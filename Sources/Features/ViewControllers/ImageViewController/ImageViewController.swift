@@ -11,10 +11,13 @@ import UIKit
 class ImageViewController: UIViewController {
     // MARK: - IBOutlets
     
+    @IBOutlet weak var scrollView: UIScrollView!
     @IBOutlet weak var userImage: UIImageView!
     @IBOutlet weak var userNameLabel: UILabel!
     @IBOutlet weak var descriptionLabel: UILabel!
     @IBOutlet weak var dateLabel: UILabel!
+    @IBOutlet weak var imageView: UIImageView!
+    @IBOutlet weak var contentView: UIView!
     
     // MARK: - Properties
 
@@ -35,8 +38,8 @@ class ImageViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+        
+        prepareScrollView()
         setupBindings()
         viewModel.input.loadImage.onNext(())
     }
@@ -57,11 +60,38 @@ class ImageViewController: UIViewController {
             .observe(on: MainScheduler.asyncInstance)
             .bind(to: descriptionLabel.rx.text)
             .disposed(by: disposeBag)
+        
+        viewModel.output.mainPhoto
+            .observe(on: MainScheduler.asyncInstance)
+            .bind(to: self.rx.mainPhotoLoad)
+            .disposed(by: disposeBag)
+        
+        viewModel.output.isLoading
+            .observe(on: MainScheduler.asyncInstance)
+            .bind(to: self.rx.isLoading)
+            .disposed(by: disposeBag)
+    }
+    
+    private func prepareScrollView() {
+        scrollView.delegate = self
+        scrollView.minimumZoomScale = 1.0
+        scrollView.maximumZoomScale = 5.0
+
+        scrollView.contentSize = .init(width: 2000, height: 2000)
     }
     
     func loadProfileImage(url: String) {
         userImage.fetchImage(from: url)
     }
+    
+    func loadMainImage(url: String) {
+        imageView.fetchImage(from: url)
+    }
+    
+    @IBAction func exitAction(_ sender: UIButton) {
+        dismiss(animated: true)
+    }
+    
 }
 
 extension Reactive where Base: ImageViewController {
@@ -70,4 +100,19 @@ extension Reactive where Base: ImageViewController {
             base.loadProfileImage(url: urlString)
         })
     }
+    
+    internal var mainPhotoLoad: Binder<String> {
+        return Binder(self.base, binding: { base, urlString in
+            base.loadMainImage(url: urlString)
+        })
+    }
+    
+    internal var isLoading: Binder<Bool> {
+        return Binder(self.base) { base, isLoading in
+            
+        }
+    }
+    
 }
+
+extension ImageViewController: UIScrollViewDelegate {}

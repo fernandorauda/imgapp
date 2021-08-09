@@ -32,6 +32,11 @@ final class ViewControllerAssembly: Assembly {
             return UserViewController(viewModel: viewModel)
         }
         
+        container.register(ImageViewController.self) { (resolver, id: String) in
+            let viewModel = ImageViewModelDefault(imageFetcher: resolver ~> (HomeFetcherDefault.self), id: id)
+            return ImageViewController(viewModel: viewModel)
+        }
+        
         container.autoregister(HomeSectionControllerProvider.self, initializer: HomeSectionControllerProvider.init)
 
     }

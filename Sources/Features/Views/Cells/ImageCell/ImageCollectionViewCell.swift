@@ -16,6 +16,7 @@ final class ImageCollectionViewCell: UICollectionViewCell {
         imageView.layer.cornerRadius = 16
         imageView.layer.masksToBounds = true
         imageView.contentMode = .scaleAspectFill
+        imageView.isUserInteractionEnabled = true
         imageView.backgroundColor = .secondarySystemBackground
         imageView.translatesAutoresizingMaskIntoConstraints = false
         return imageView
@@ -135,8 +136,11 @@ final class ImageCollectionViewCell: UICollectionViewCell {
     func addGestures() {
         let tapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(imageTapped(tapGestureRecognizer:)))
         let profileTapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(imageTapped(tapGestureRecognizer:)))
+        let mainTapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(mainTapped(tapGestureRecognizer:)))
+        
         profileImage.addGestureRecognizer(profileTapGestureRecognizer)
         nameUserLabel.addGestureRecognizer(tapGestureRecognizer)
+        imageView.addGestureRecognizer(mainTapGestureRecognizer)
     }
     
     // MARK: - Actions
@@ -147,6 +151,10 @@ final class ImageCollectionViewCell: UICollectionViewCell {
     
     @objc func imageTapped(tapGestureRecognizer: UITapGestureRecognizer) {
         next?.didOpenUserDetail(with: viewModel.username)
+    }
+    
+    @objc func mainTapped(tapGestureRecognizer: UITapGestureRecognizer) {
+        next?.didOpenImageDetail(with: viewModel.imageId)
     }
 }
 

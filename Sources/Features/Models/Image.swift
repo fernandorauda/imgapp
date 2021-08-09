@@ -15,11 +15,12 @@ class Image: NSObject, Decodable {
     let urls: Url?
     let user: User?
     
-    init(id: String?, likes: Int?, urls: Url?, user: User?) {
+    init(id: String?, likes: Int?, urls: Url?, user: User?, desc: String?) {
         self.id = id
         self.likes = likes
         self.urls = urls
         self.user = user
+        self.desc = desc
     }
     
     enum CodingKeys: String, CodingKey {

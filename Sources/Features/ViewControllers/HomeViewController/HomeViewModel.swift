@@ -27,6 +27,7 @@ protocol HomeViewModel {
     var output: Output { get }
     
     func navigateToUser(username: String)
+    func navigateToImage(id: String)
 }
 
 struct HomeViewModelDefault: HomeViewModel {
@@ -71,7 +72,11 @@ struct HomeViewModelDefault: HomeViewModel {
     // MARK: - Navigation
 
     func navigateToUser(username: String) {
-        delegate?.homeViewModelDidNavigateToUser(username)
+        delegate?.homeCoordinatorDidNavigateToUser(username)
+    }
+    
+    func navigateToImage(id: String) {
+        delegate?.homeCoordinatorDidNavigateToImage(id)
     }
     
 }

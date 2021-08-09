@@ -14,6 +14,10 @@ final class ImageCellViewModel: CollectionCellViewModel {
         self.image = image
     }
     
+    var imageId: String {
+        image.id ?? ""
+    }
+    
     var imageUrl: String? {
         image.urls?.small
     }

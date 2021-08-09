@@ -90,6 +90,10 @@ final class HomeViewController: UIViewController {
     override func didOpenUserDetail(with username: String) {
         viewModel.navigateToUser(username: username)
     }
+    
+    override func didOpenImageDetail(with id: String) {
+        viewModel.navigateToImage(id: id)
+    }
 }
 
 // MARK: ScrollViewDelegate

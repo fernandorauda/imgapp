@@ -15,4 +15,9 @@ extension UIResponder {
     @objc func didOpenUserDetail(with username: String) {
         next?.didOpenUserDetail(with: username)
     }
+    
+    @objc func didOpenImageDetail(with id: String) {
+        next?.didOpenImageDetail(with: id)
+    }
+
 }

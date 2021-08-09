@@ -8,7 +8,8 @@
 import UIKit
 
 protocol HomeCoordinatorDelegate: AnyObject {
-    func homeViewModelDidNavigateToUser(_ username: String)
+    func homeCoordinatorDidNavigateToUser(_ username: String)
+    func homeCoordinatorDidNavigateToImage(_ userId: String)
 }
 
 final class HomeCoordinator: Coordinator {
@@ -41,7 +42,7 @@ final class HomeCoordinator: Coordinator {
 }
 
 extension HomeCoordinator: HomeCoordinatorDelegate {
-    func homeViewModelDidNavigateToUser(_ username: String) {
+    func homeCoordinatorDidNavigateToUser(_ username: String) {
         let viewController: UserViewController = Injector
             .current
             .resolver
@@ -50,5 +51,17 @@ extension HomeCoordinator: HomeCoordinatorDelegate {
                 argument: username as String
             ).unwrap()
         presenter.pushViewController(viewController, animated: true)
+    }
+    
+    func homeCoordinatorDidNavigateToImage(_ id: String) {
+        let viewController: ImageViewController = Injector
+            .current
+            .resolver
+            .resolve(
+                ImageViewController.self,
+                argument: id as String
+            ).unwrap()
+        viewController.modalPresentationStyle = .fullScreen
+        presenter.present(viewController, animated: true)
     }
 }

@@ -9,8 +9,11 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="ImageViewController" customModule="imgapp" customModuleProvider="target">
             <connections>
+                <outlet property="contentView" destination="fhJ-bI-PtZ" id="FkI-B8-gJG"/>
                 <outlet property="dateLabel" destination="5DS-UG-4th" id="2q1-B4-PV8"/>
                 <outlet property="descriptionLabel" destination="79b-G3-Ur6" id="iQU-ks-SKF"/>
+                <outlet property="imageView" destination="stH-Lb-sB2" id="yul-QE-rGm"/>
+                <outlet property="scrollView" destination="dOD-Rw-tGE" id="Nbk-jg-3Ok"/>
                 <outlet property="userImage" destination="3Bz-di-ul1" id="cfG-A5-Ytr"/>
                 <outlet property="userNameLabel" destination="tHn-ic-DdC" id="qJN-gL-NtM"/>
                 <outlet property="view" destination="iN0-l3-epB" id="lmu-lj-O3i"/>
@@ -21,6 +24,22 @@
             <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
+                <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="dOD-Rw-tGE">
+                    <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                    <subviews>
+                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="stH-Lb-sB2">
+                            <rect key="frame" x="16" y="16" width="382" height="864"/>
+                        </imageView>
+                    </subviews>
+                    <constraints>
+                        <constraint firstItem="stH-Lb-sB2" firstAttribute="centerX" secondItem="dOD-Rw-tGE" secondAttribute="centerX" id="4Ok-NF-xnk"/>
+                        <constraint firstItem="stH-Lb-sB2" firstAttribute="leading" secondItem="dOD-Rw-tGE" secondAttribute="leading" constant="16" id="CbF-9d-x7C"/>
+                        <constraint firstAttribute="trailing" secondItem="stH-Lb-sB2" secondAttribute="trailing" constant="16" id="EpG-45-kok"/>
+                        <constraint firstItem="stH-Lb-sB2" firstAttribute="centerY" secondItem="dOD-Rw-tGE" secondAttribute="centerY" id="Wij-IM-Spm"/>
+                        <constraint firstItem="stH-Lb-sB2" firstAttribute="top" secondItem="dOD-Rw-tGE" secondAttribute="top" constant="16" id="g2U-yO-aqX"/>
+                        <constraint firstAttribute="bottom" secondItem="stH-Lb-sB2" secondAttribute="bottom" constant="16" id="pCl-nO-Rrf"/>
+                    </constraints>
+                </scrollView>
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="fhJ-bI-PtZ">
                     <rect key="frame" x="0.0" y="738" width="414" height="124"/>
                     <subviews>
@@ -78,18 +97,25 @@
                     </constraints>
                     <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     <state key="normal" image="arrow.backward" catalog="system"/>
+                    <connections>
+                        <action selector="exitAction:" destination="-1" eventType="touchUpInside" id="mDt-At-zd3"/>
+                    </connections>
                 </button>
             </subviews>
             <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
             <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
             <constraints>
                 <constraint firstItem="vUN-kp-3ea" firstAttribute="bottom" secondItem="fhJ-bI-PtZ" secondAttribute="bottom" id="0Iz-dJ-6on"/>
+                <constraint firstItem="dOD-Rw-tGE" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" id="4eb-1P-quZ"/>
                 <constraint firstItem="kxB-CN-h8V" firstAttribute="top" secondItem="vUN-kp-3ea" secondAttribute="top" constant="16" id="75Z-Kx-xIG"/>
+                <constraint firstAttribute="bottom" secondItem="dOD-Rw-tGE" secondAttribute="bottom" id="Dlr-zH-act"/>
                 <constraint firstItem="fhJ-bI-PtZ" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" id="HD4-lz-YeX"/>
                 <constraint firstItem="kxB-CN-h8V" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="16" id="JdE-Uy-PBp"/>
                 <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="fhJ-bI-PtZ" secondAttribute="trailing" id="pW4-3w-TQu"/>
+                <constraint firstItem="dOD-Rw-tGE" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="rhb-YU-CRt"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="dOD-Rw-tGE" secondAttribute="trailing" id="ykr-Vo-onw"/>
             </constraints>
-            <point key="canvasLocation" x="139" y="153"/>
+            <point key="canvasLocation" x="137.68115942028987" y="152.67857142857142"/>
         </view>
     </objects>
     <resources>

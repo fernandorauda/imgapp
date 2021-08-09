@@ -34,5 +34,12 @@ final class ViewModelAssembly: Assembly {
                 username: resolver ~> (String.self)
             )
         }
+        
+        container.register(ImageViewModelDefault.self) { resolver in
+            ImageViewModelDefault(
+                imageFetcher: resolver ~> (HomeFetcherDefault.self),
+                id: resolver ~> (String.self)
+            )
+        }
     }
 }
