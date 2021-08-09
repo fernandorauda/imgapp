@@ -74,7 +74,7 @@ struct ImageViewModelDefault: ImageViewModel {
         }.do(onNext: { _ in isLoading.accept(false) })
         
         let mainPhoto = fetchResult.map { image in
-            image.urls?.small ?? ""
+            image.urls?.full ?? ""
         }
         
         output = .init(

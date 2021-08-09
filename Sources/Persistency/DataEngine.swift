@@ -106,7 +106,7 @@ struct CoreDataEngine: DataEngine {
                 urls: Url(
                     regular: nil,
                     full: object.value(forKeyPath: "imageUrl") as? String,
-                    small: object.value(forKeyPath: "imageUrl") as? String,
+                    small: nil,
                     medium: nil),
                 user: User(
                     id: object.value(forKeyPath: "userId") as? String,
