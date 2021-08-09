@@ -14,13 +14,15 @@ class Image: NSObject, Decodable {
     let desc: String?
     let urls: Url?
     let user: User?
+    let createdAt: String?
     
-    init(id: String?, likes: Int?, urls: Url?, user: User?, desc: String?) {
+    init(id: String?, likes: Int?, urls: Url?, user: User?, desc: String?, createdAt: String?) {
         self.id = id
         self.likes = likes
         self.urls = urls
         self.user = user
         self.desc = desc
+        self.createdAt = createdAt
     }
     
     enum CodingKeys: String, CodingKey {
@@ -29,6 +31,7 @@ class Image: NSObject, Decodable {
         case desc = "description"
         case urls
         case user
+        case createdAt = "created_at"
     }
     
     func numberOfLikes() -> String? {

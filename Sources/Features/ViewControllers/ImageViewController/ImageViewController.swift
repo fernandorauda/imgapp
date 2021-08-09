@@ -39,7 +39,7 @@ class ImageViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        prepareScrollView()
+        prepareViews()
         setupBindings()
         viewModel.input.loadImage.onNext(())
     }
@@ -70,14 +70,20 @@ class ImageViewController: UIViewController {
             .observe(on: MainScheduler.asyncInstance)
             .bind(to: self.rx.isLoading)
             .disposed(by: disposeBag)
+        
+        viewModel.output.date
+            .observe(on: MainScheduler.asyncInstance)
+            .bind(to: dateLabel.rx.text)
+            .disposed(by: disposeBag)
     }
     
-    private func prepareScrollView() {
+    private func prepareViews() {
         scrollView.delegate = self
         scrollView.minimumZoomScale = 1.0
         scrollView.maximumZoomScale = 5.0
 
         scrollView.contentSize = .init(width: 2000, height: 2000)
+        contentView.isHidden = true
     }
     
     func loadProfileImage(url: String) {
@@ -86,6 +92,10 @@ class ImageViewController: UIViewController {
     
     func loadMainImage(url: String) {
         imageView.fetchImage(from: url)
+    }
+    
+    func endLoadContent() {
+        contentView.isHidden = false
     }
     
     @IBAction func exitAction(_ sender: UIButton) {
@@ -109,10 +119,23 @@ extension Reactive where Base: ImageViewController {
     
     internal var isLoading: Binder<Bool> {
         return Binder(self.base) { base, isLoading in
-            
+            if !isLoading {
+                base.endLoadContent()
+            }
         }
     }
     
 }
 
-extension ImageViewController: UIScrollViewDelegate {}
+extension ImageViewController: UIScrollViewDelegate {
+    func viewForZooming(in scrollView: UIScrollView) -> UIView? {
+        return imageView
+    }
+
+    func updateZoomFor(size: CGSize){
+        let widthScale = size.width / imageView.bounds.width
+        let heightScale = size.height / imageView.bounds.height
+        let scale = min(widthScale,heightScale)
+        scrollView.minimumZoomScale = scale
+    }
+}

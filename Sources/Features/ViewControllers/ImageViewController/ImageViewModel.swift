@@ -21,6 +21,7 @@ struct ImageViewModelOutput {
     let desc: Observable<String>
     let userPhoto: Observable<String>
     let mainPhoto: Observable<String>
+    let date: Observable<String>
 }
 
 
@@ -68,17 +69,21 @@ struct ImageViewModelDefault: ImageViewModel {
             image.user?.profileImage?.medium ?? ""
         }
         
+        let date = fetchResult.map { image in
+            image.createdAt ?? ""
+        }
+        
         let mainPhoto = fetchResult.map { image in
             image.urls?.small ?? ""
-        }
-        .do(onNext: { _ in isLoading.accept(true) })
+        }.do(onNext: { _ in isLoading.accept(false) })
         
         output = .init(
             isLoading: isLoading.asObservable(),
             userName: name,
             desc: desc,
             userPhoto: userPhoto,
-            mainPhoto: mainPhoto
+            mainPhoto: mainPhoto,
+            date: date
         )
     }
 }

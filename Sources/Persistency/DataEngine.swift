@@ -122,7 +122,8 @@ struct CoreDataEngine: DataEngine {
                     totalCollections: nil,
                     location: nil,
                     bio: nil),
-                desc: nil
+                desc: nil,
+                createdAt: nil
             )
             images.append(image)
         }
