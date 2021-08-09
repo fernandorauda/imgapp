@@ -61,15 +61,13 @@ final class TabBarCoordinator: Coordinator {
 
         switch item {
         case .home:
-            // If needed: Each tab bar flow can have it's own Coordinator.
-        
-            
             let coordinator: HomeCoordinator = Injector.current.resolver.resolve(
                 HomeCoordinator.self,
                 arguments: navController, self as Coordinator
             ).unwrap()
             coordinator.start()
             addChildCoordinator(coordinator)
+            
         case .likes:
             let likesViewController: LikesViewController = Injector.current.resolver.resolve(LikesViewController.self).unwrap()
             navController.pushViewController(likesViewController, animated: true)

@@ -134,7 +134,8 @@ final class ImageCollectionViewCell: UICollectionViewCell {
     
     func addGestures() {
         let tapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(imageTapped(tapGestureRecognizer:)))
-        profileImage.addGestureRecognizer(tapGestureRecognizer)
+        let profileTapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(imageTapped(tapGestureRecognizer:)))
+        profileImage.addGestureRecognizer(profileTapGestureRecognizer)
         nameUserLabel.addGestureRecognizer(tapGestureRecognizer)
     }
     

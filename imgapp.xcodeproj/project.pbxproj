@@ -9,6 +9,9 @@
 /* Begin PBXBuildFile section */
 		CE4684AA26C16F5E006698DA /* UserRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE4684A926C16F5E006698DA /* UserRepository.swift */; };
 		CE4684AC26C1719F006698DA /* UserFetcher.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE4684AB26C1719F006698DA /* UserFetcher.swift */; };
+		CE4684AF26C19521006698DA /* ImageViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE4684AE26C19521006698DA /* ImageViewModel.swift */; };
+		CE4684B126C1952F006698DA /* ImageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE4684B026C1952F006698DA /* ImageViewController.swift */; };
+		CE4684B326C1953E006698DA /* ImageViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = CE4684B226C1953E006698DA /* ImageViewController.xib */; };
 		CE5E481826BE39DE00AB7FC9 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE5E481726BE39DE00AB7FC9 /* AppDelegate.swift */; };
 		CE5E481C26BE39DE00AB7FC9 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE5E481B26BE39DE00AB7FC9 /* HomeViewController.swift */; };
 		CE5E482126BE39DF00AB7FC9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CE5E482026BE39DF00AB7FC9 /* Assets.xcassets */; };
@@ -83,6 +86,9 @@
 /* Begin PBXFileReference section */
 		CE4684A926C16F5E006698DA /* UserRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserRepository.swift; sourceTree = "<group>"; };
 		CE4684AB26C1719F006698DA /* UserFetcher.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserFetcher.swift; sourceTree = "<group>"; };
+		CE4684AE26C19521006698DA /* ImageViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageViewModel.swift; sourceTree = "<group>"; };
+		CE4684B026C1952F006698DA /* ImageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageViewController.swift; sourceTree = "<group>"; };
+		CE4684B226C1953E006698DA /* ImageViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ImageViewController.xib; sourceTree = "<group>"; };
 		CE5E481426BE39DE00AB7FC9 /* imgapp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = imgapp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CE5E481726BE39DE00AB7FC9 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		CE5E481B26BE39DE00AB7FC9 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
@@ -167,6 +173,16 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		CE4684AD26C19506006698DA /* ImageViewController */ = {
+			isa = PBXGroup;
+			children = (
+				CE4684AE26C19521006698DA /* ImageViewModel.swift */,
+				CE4684B026C1952F006698DA /* ImageViewController.swift */,
+				CE4684B226C1953E006698DA /* ImageViewController.xib */,
+			);
+			path = ImageViewController;
+			sourceTree = "<group>";
+		};
 		CE5E480B26BE39DE00AB7FC9 = {
 			isa = PBXGroup;
 			children = (
@@ -341,6 +357,7 @@
 		CE9B030526BECEC7007A4928 /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
+				CE4684AD26C19506006698DA /* ImageViewController */,
 				CE8764FA26C0D7F40029D3F4 /* UserViewController */,
 				CE9B030926BECF7C007A4928 /* LikesViewController */,
 				CE9B030626BECED1007A4928 /* HomeViewController */,
@@ -563,6 +580,7 @@
 				CE87650026C0D8230029D3F4 /* UserViewController.xib in Resources */,
 				CE5E482126BE39DF00AB7FC9 /* Assets.xcassets in Resources */,
 				CE9B030826BECEE1007A4928 /* HomeViewController.xib in Resources */,
+				CE4684B326C1953E006698DA /* ImageViewController.xib in Resources */,
 				CE9B030D26BECFA6007A4928 /* LikesViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -584,6 +602,7 @@
 				CE8764F426C0C05A0029D3F4 /* LikesViewModel.swift in Sources */,
 				CE9B033826BF2C7C007A4928 /* ViewModelAssembly.swift in Sources */,
 				CE9B034026BF30BB007A4928 /* RepositoryAssembler.swift in Sources */,
+				CE4684B126C1952F006698DA /* ImageViewController.swift in Sources */,
 				CE87650426C0DDC80029D3F4 /* HomeCoordinator.swift in Sources */,
 				CEA7779026C042F80003D821 /* UILabel+Shadow.swift in Sources */,
 				CEA777AA26C092650003D821 /* UIResponder+Extension.swift in Sources */,
@@ -634,6 +653,7 @@
 				CEA7779D26C06DBB0003D821 /* ListCellConfigurator.swift in Sources */,
 				CE9B02FF26BEBE55007A4928 /* ApplicationCoordinator.swift in Sources */,
 				CE8764F726C0D11C0029D3F4 /* EmptyCollectionViewCell.swift in Sources */,
+				CE4684AF26C19521006698DA /* ImageViewModel.swift in Sources */,
 				CE9B032A26BEF414007A4928 /* DataService.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -10,13 +10,16 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="UserViewController" customModule="imgapp" customModuleProvider="target">
             <connections>
+                <outlet property="activityIndicator" destination="ERB-AW-lS3" id="uIf-15-KvJ"/>
                 <outlet property="bioLabel" destination="bH5-Mt-vdf" id="db7-4r-NCe"/>
                 <outlet property="locationLabel" destination="0dw-Gl-WKP" id="7Ke-Gu-siS"/>
+                <outlet property="locationStackview" destination="cMd-BV-VVz" id="MKM-BG-qDy"/>
                 <outlet property="nameLabel" destination="S3H-VR-N6L" id="1uY-1b-JHZ"/>
                 <outlet property="numberOfCollectionsLabel" destination="xnv-Ec-JXh" id="CWK-7I-ZyL"/>
                 <outlet property="numberOfLikesLabel" destination="0QF-gb-iLr" id="I6B-WH-HCY"/>
                 <outlet property="numberOfPhotosLabel" destination="VXf-NU-gXd" id="Byf-WK-zZq"/>
                 <outlet property="photoImageView" destination="vNZ-3J-hvq" id="JE7-8a-KES"/>
+                <outlet property="scrollView" destination="W7f-3F-ud2" id="nUH-ZT-Hve"/>
                 <outlet property="view" destination="iN0-l3-epB" id="kYG-ge-5zZ"/>
             </connections>
         </placeholder>
@@ -25,11 +28,14 @@
             <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
+                <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" animating="YES" style="large" translatesAutoresizingMaskIntoConstraints="NO" id="ERB-AW-lS3">
+                    <rect key="frame" x="188.5" y="429.5" width="37" height="37"/>
+                </activityIndicatorView>
                 <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="W7f-3F-ud2">
                     <rect key="frame" x="0.0" y="44" width="414" height="818"/>
                     <subviews>
                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ODm-NB-SkT">
-                            <rect key="frame" x="0.0" y="0.0" width="414" height="500"/>
+                            <rect key="frame" x="0.0" y="0.0" width="414" height="400.5"/>
                             <subviews>
                                 <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="vNZ-3J-hvq">
                                     <rect key="frame" x="147" y="16" width="120" height="120"/>
@@ -49,7 +55,7 @@
                                     <nil key="textColor"/>
                                     <nil key="highlightedColor"/>
                                 </label>
-                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bH5-Mt-vdf">
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bH5-Mt-vdf">
                                     <rect key="frame" x="16" y="187.5" width="382" height="19"/>
                                     <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="16"/>
                                     <color key="textColor" systemColor="placeholderTextColor"/>
@@ -93,7 +99,7 @@
                                     </subviews>
                                 </stackView>
                                 <stackView opaque="NO" contentMode="scaleToFill" spacing="40" translatesAutoresizingMaskIntoConstraints="NO" id="fMv-Wx-hbu">
-                                    <rect key="frame" x="86" y="282.5" width="242" height="46"/>
+                                    <rect key="frame" x="86" y="290.5" width="242" height="46"/>
                                     <subviews>
                                         <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="tSt-1b-1EC">
                                             <rect key="frame" x="0.0" y="0.0" width="51" height="46"/>
@@ -149,9 +155,9 @@
                                     </subviews>
                                 </stackView>
                                 <stackView opaque="NO" contentMode="scaleToFill" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="cMd-BV-VVz">
-                                    <rect key="frame" x="170.5" y="344.5" width="73.5" height="16"/>
+                                    <rect key="frame" x="170.5" y="360.5" width="73.5" height="16"/>
                                     <subviews>
-                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="W4C-rU-kdb">
+                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ico_location" translatesAutoresizingMaskIntoConstraints="NO" id="W4C-rU-kdb">
                                             <rect key="frame" x="0.0" y="0.0" width="16" height="16"/>
                                             <constraints>
                                                 <constraint firstAttribute="width" constant="16" id="HDV-a2-xCf"/>
@@ -172,14 +178,14 @@
                                 <constraint firstItem="S3H-VR-N6L" firstAttribute="centerX" secondItem="ODm-NB-SkT" secondAttribute="centerX" id="157-yI-5t6"/>
                                 <constraint firstItem="vNZ-3J-hvq" firstAttribute="centerX" secondItem="ODm-NB-SkT" secondAttribute="centerX" id="5hr-2g-1bH"/>
                                 <constraint firstAttribute="trailing" secondItem="S3H-VR-N6L" secondAttribute="trailing" constant="16" id="760-lY-d4W"/>
+                                <constraint firstAttribute="bottom" secondItem="cMd-BV-VVz" secondAttribute="bottom" constant="24" id="IUd-b5-9ny"/>
                                 <constraint firstItem="S3H-VR-N6L" firstAttribute="top" secondItem="vNZ-3J-hvq" secondAttribute="bottom" constant="16" id="JQ6-mT-fus"/>
                                 <constraint firstItem="bH5-Mt-vdf" firstAttribute="top" secondItem="S3H-VR-N6L" secondAttribute="bottom" constant="8" id="RiI-c8-2hr"/>
                                 <constraint firstItem="kLn-MU-vXY" firstAttribute="top" secondItem="bH5-Mt-vdf" secondAttribute="bottom" constant="16" id="S1O-iU-KZ1"/>
-                                <constraint firstItem="cMd-BV-VVz" firstAttribute="top" secondItem="fMv-Wx-hbu" secondAttribute="bottom" constant="16" id="ZxT-jM-NTh"/>
+                                <constraint firstItem="cMd-BV-VVz" firstAttribute="top" secondItem="fMv-Wx-hbu" secondAttribute="bottom" constant="24" id="ZxT-jM-NTh"/>
                                 <constraint firstItem="kLn-MU-vXY" firstAttribute="centerX" secondItem="ODm-NB-SkT" secondAttribute="centerX" id="b3z-e8-kjb"/>
                                 <constraint firstItem="cMd-BV-VVz" firstAttribute="centerX" secondItem="ODm-NB-SkT" secondAttribute="centerX" id="c5o-H9-vY0"/>
-                                <constraint firstItem="fMv-Wx-hbu" firstAttribute="top" secondItem="kLn-MU-vXY" secondAttribute="bottom" constant="16" id="mX4-3g-3Ke"/>
-                                <constraint firstAttribute="height" constant="500" id="n89-6a-cUV"/>
+                                <constraint firstItem="fMv-Wx-hbu" firstAttribute="top" secondItem="kLn-MU-vXY" secondAttribute="bottom" constant="24" id="mX4-3g-3Ke"/>
                                 <constraint firstItem="bH5-Mt-vdf" firstAttribute="leading" secondItem="ODm-NB-SkT" secondAttribute="leading" constant="16" id="oYs-I1-vIC"/>
                                 <constraint firstItem="fMv-Wx-hbu" firstAttribute="centerX" secondItem="ODm-NB-SkT" secondAttribute="centerX" id="rud-7o-4TA"/>
                                 <constraint firstItem="vNZ-3J-hvq" firstAttribute="top" secondItem="ODm-NB-SkT" secondAttribute="top" constant="16" id="smd-hB-tYK"/>
@@ -202,13 +208,16 @@
             <constraints>
                 <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="W7f-3F-ud2" secondAttribute="trailing" id="0eE-xd-vJJ"/>
                 <constraint firstItem="vUN-kp-3ea" firstAttribute="bottom" secondItem="W7f-3F-ud2" secondAttribute="bottom" id="ABA-SZ-6ZT"/>
+                <constraint firstItem="ERB-AW-lS3" firstAttribute="centerY" secondItem="iN0-l3-epB" secondAttribute="centerY" id="Csb-pA-FQg"/>
                 <constraint firstItem="W7f-3F-ud2" firstAttribute="top" secondItem="vUN-kp-3ea" secondAttribute="top" id="TeO-CF-KSu"/>
                 <constraint firstItem="W7f-3F-ud2" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" id="tQx-bZ-bcl"/>
+                <constraint firstItem="ERB-AW-lS3" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="tVs-DZ-GWv"/>
             </constraints>
             <point key="canvasLocation" x="139" y="153"/>
         </view>
     </objects>
     <resources>
+        <image name="ico_location" width="9" height="12"/>
         <systemColor name="placeholderTextColor">
             <color red="0.23529411764705882" green="0.23529411764705882" blue="0.2627450980392157" alpha="0.29999999999999999" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>

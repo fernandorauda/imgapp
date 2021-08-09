@@ -22,4 +22,10 @@ struct APIEndpoints {
         )
     }
     
+    static func getImage(with id: String) -> Endpoint<Image> {
+        Endpoint(path: "photos/\(id)/",
+                 method: .get
+        )
+    }
+    
 }

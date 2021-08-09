@@ -11,6 +11,7 @@ import RxCocoa
 
 protocol ImageRepository {
     func fetchImagesList(with criteria: ImagesRequestDTO) -> Observable<[Image]>
+    func fetchImage(with id: String) -> Observable<Image>
 }
 
 
@@ -25,6 +26,22 @@ final class ImagesRepositoryDefault: ImageRepository {
     func fetchImagesList(with criteria: ImagesRequestDTO) -> Observable<[Image]> {
         Observable.create { [dataConvert] observer in
             let endpoint = APIEndpoints.getImages(with: criteria)
+            dataConvert.request(with: endpoint) { result in
+                switch result {
+                case let .success(response):
+                    observer.onNext(response)
+                    observer.onCompleted()
+                case let .failure(error):
+                    observer.onError(error)
+                }
+            }
+            return Disposables.create()
+        }
+    }
+    
+    func fetchImage(with id: String) -> Observable<Image> {
+        Observable.create { [dataConvert] observer in
+            let endpoint = APIEndpoints.getImage(with: id)
             dataConvert.request(with: endpoint) { result in
                 switch result {
                 case let .success(response):

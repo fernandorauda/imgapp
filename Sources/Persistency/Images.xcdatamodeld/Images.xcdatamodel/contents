@@ -4,10 +4,12 @@
         <attribute name="id" optional="YES" attributeType="String"/>
         <attribute name="imageUrl" optional="YES" attributeType="String"/>
         <attribute name="likes" optional="YES" attributeType="Integer 32" defaultValueString="0" usesScalarValueType="YES"/>
-        <attribute name="userName" optional="YES" attributeType="String"/>
+        <attribute name="name" optional="YES" attributeType="String"/>
+        <attribute name="userId" optional="YES" attributeType="String"/>
+        <attribute name="username" optional="YES" attributeType="String"/>
         <attribute name="userPhoto" optional="YES" attributeType="String"/>
     </entity>
     <elements>
-        <element name="ImageEntity" positionX="-345.2158813476562" positionY="-207.8160705566406" width="128" height="104"/>
+        <element name="ImageEntity" positionX="-345.2158813476562" positionY="-207.8160705566406" width="128" height="134"/>
     </elements>
 </model>

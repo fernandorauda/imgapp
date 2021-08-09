@@ -13,7 +13,7 @@ final class EmptyCollectionViewCell: UICollectionViewCell {
     lazy var messageLabel: UILabel = {
         let label = UILabel()
         label.numberOfLines = 0
-        label.text = "Añade tus imagenes favoritas y miralas en esta sección"
+        label.text = "Add your favorite images and see them here"
         label.translatesAutoresizingMaskIntoConstraints = false
         return label
     }()

@@ -29,4 +29,26 @@ struct User: Decodable {
         case totalPhotos = "total_photos"
         case totalCollections = "total_collections"
     }
+    
+    func numberOfPhotos() -> String? {
+        guard let numberOfPhotos = totalPhotos else {
+            return nil
+        }
+        return "\(numberOfPhotos)"
+    }
+    
+    func numberOfLikes() -> String? {
+        guard let numberOfLikes = totalLikes else {
+            return nil
+        }
+        return "\(numberOfLikes)"
+    }
+    
+    func numberOfCollections() -> String? {
+        guard let numberOfCollections = totalCollections else {
+            return nil
+        }
+        return "\(numberOfCollections)"
+    }
 }
+

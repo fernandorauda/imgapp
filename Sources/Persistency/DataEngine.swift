@@ -56,9 +56,11 @@ struct CoreDataEngine: DataEngine {
             )
             image.setValue(item.id ?? "", forKeyPath: "id")
             image.setValue(item.likes ?? "", forKeyPath: "likes")
-            image.setValue(item.user?.name ?? "", forKey: "userName")
+            image.setValue(item.user?.username ?? "", forKey: "username")
             image.setValue(item.user?.profileImage?.medium ?? "", forKey: "userPhoto")
             image.setValue(item.urls?.small ?? "", forKey: "imageUrl")
+            image.setValue(item.user?.id ?? "", forKey: "userId")
+            image.setValue(item.user?.name, forKey: "name")
         }
         
         do {
@@ -101,8 +103,25 @@ struct CoreDataEngine: DataEngine {
             let image = Image(
                 id: object.value(forKeyPath: "id") as? String,
                 likes: object.value(forKeyPath: "likes") as? Int,
-                urls: Url(regular: nil, full: object.value(forKeyPath: "imageUrl") as? String, small: object.value(forKeyPath: "imageUrl") as? String, medium: nil),
-                user: User(id: nil, username: nil, name: object.value(forKeyPath: "userName") as? String, profileImage: Url(regular: nil, full: nil, small: nil, medium: object.value(forKeyPath: "userPhoto") as? String))
+                urls: Url(
+                    regular: nil,
+                    full: object.value(forKeyPath: "imageUrl") as? String,
+                    small: object.value(forKeyPath: "imageUrl") as? String,
+                    medium: nil),
+                user: User(
+                    id: object.value(forKeyPath: "userId") as? String,
+                    username: object.value(forKeyPath: "username") as? String,
+                    name: object.value(forKeyPath: "name") as? String,
+                    profileImage: Url(
+                        regular: nil,
+                        full: nil,
+                        small: nil,
+                        medium: object.value(forKeyPath: "userPhoto") as? String),
+                    totalLikes: nil,
+                    totalPhotos: nil,
+                    totalCollections: nil,
+                    location: nil,
+                    bio: nil)
             )
             images.append(image)
         }
