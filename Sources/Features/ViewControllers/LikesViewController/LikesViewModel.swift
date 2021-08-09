@@ -41,7 +41,7 @@ struct LikesViewModelDefault: LikesViewModel {
         let sendFavorite = PublishSubject<Image>()
         input = Input(loadImages: loadImages, sendFavorite: sendFavorite)
         
-        let sections = Observable.combineLatest(input.loadImages, input.sendFavorite)
+        let sections = input.loadImages
             .flatMapLatest { [dataEngine, factory] _ -> Observable<[SectionType]> in
                 dataEngine.getItems().map { items -> [SectionType] in
                     factory.sections(images: items ?? [], isLoading: false)

@@ -14,6 +14,7 @@
 		CE8764F026C0A8540029D3F4 /* Images.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = CEA777AC26C0981D0003D821 /* Images.xcdatamodeld */; };
 		CE8764F226C0BD8F0029D3F4 /* PersistencyAssembly.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE8764F126C0BD8F0029D3F4 /* PersistencyAssembly.swift */; };
 		CE8764F426C0C05A0029D3F4 /* LikesViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE8764F326C0C05A0029D3F4 /* LikesViewModel.swift */; };
+		CE8764F726C0D11C0029D3F4 /* EmptyCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE8764F626C0D11C0029D3F4 /* EmptyCollectionViewCell.swift */; };
 		CE9B02F026BEBCE1007A4928 /* Coordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE9B02EF26BEBCE1007A4928 /* Coordinator.swift */; };
 		CE9B02F326BEBD11007A4928 /* Optional+Unwrap.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE9B02F226BEBD11007A4928 /* Optional+Unwrap.swift */; };
 		CE9B02F626BEBD6A007A4928 /* Swinject in Frameworks */ = {isa = PBXBuildFile; productRef = CE9B02F526BEBD6A007A4928 /* Swinject */; };
@@ -80,6 +81,7 @@
 		CE5E482526BE39DF00AB7FC9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		CE8764F126C0BD8F0029D3F4 /* PersistencyAssembly.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersistencyAssembly.swift; sourceTree = "<group>"; };
 		CE8764F326C0C05A0029D3F4 /* LikesViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LikesViewModel.swift; sourceTree = "<group>"; };
+		CE8764F626C0D11C0029D3F4 /* EmptyCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmptyCollectionViewCell.swift; sourceTree = "<group>"; };
 		CE9B02EF26BEBCE1007A4928 /* Coordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Coordinator.swift; sourceTree = "<group>"; };
 		CE9B02F226BEBD11007A4928 /* Optional+Unwrap.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Optional+Unwrap.swift"; sourceTree = "<group>"; };
 		CE9B02FB26BEBDFD007A4928 /* Injector.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Injector.swift; sourceTree = "<group>"; };
@@ -177,6 +179,14 @@
 				CE9B02E726BEB92D007A4928 /* Supporting Files */,
 			);
 			path = Sources;
+			sourceTree = "<group>";
+		};
+		CE8764F526C0D1090029D3F4 /* EmptyCell */ = {
+			isa = PBXGroup;
+			children = (
+				CE8764F626C0D11C0029D3F4 /* EmptyCollectionViewCell.swift */,
+			);
+			path = EmptyCell;
 			sourceTree = "<group>";
 		};
 		CE9B02E726BEB92D007A4928 /* Supporting Files */ = {
@@ -387,6 +397,7 @@
 		CE9B034A26BF7C50007A4928 /* Cells */ = {
 			isa = PBXGroup;
 			children = (
+				CE8764F526C0D1090029D3F4 /* EmptyCell */,
 				CEA7779126C06B7E0003D821 /* LoadingCell */,
 				CE9B034B26BF7C57007A4928 /* ImageCell */,
 			);
@@ -582,6 +593,7 @@
 				CE9B030426BEC96C007A4928 /* TabBarItem.swift in Sources */,
 				CEA7779D26C06DBB0003D821 /* ListCellConfigurator.swift in Sources */,
 				CE9B02FF26BEBE55007A4928 /* ApplicationCoordinator.swift in Sources */,
+				CE8764F726C0D11C0029D3F4 /* EmptyCollectionViewCell.swift in Sources */,
 				CE9B032A26BEF414007A4928 /* DataService.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

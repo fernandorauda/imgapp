@@ -45,7 +45,7 @@ final class LikesViewController: UIViewController {
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-        viewModel.input.loadImages.onNext(())
+        loadImages()
     }
     
     // MARK: - Bindings
@@ -86,6 +86,10 @@ final class LikesViewController: UIViewController {
     override func didMarkFavorite(with image: Image) {
         viewModel.input.sendFavorite.onNext(image)
     }
+    
+    func loadImages() {
+        viewModel.input.loadImages.onNext(())
+    }
 }
 
 
@@ -97,7 +101,8 @@ extension Reactive where Base: LikesViewController {
     }
     
     internal var favorite: Binder<Void> {
-        return Binder(self.base, binding: { _, _ in
+        return Binder(self.base, binding: { base, _ in
+            base.loadImages()
         })
     }
 
