@@ -1,0 +1,43 @@
+{
+  "object": {
+    "pins": [
+      {
+        "package": "Kingfisher",
+        "repositoryURL": "https://github.com/onevcat/Kingfisher.git",
+        "state": {
+          "branch": null,
+          "revision": "d06df9adf50ed8cde5786d935836a5f445f780ba",
+          "version": "6.3.1"
+        }
+      },
+      {
+        "package": "RxSwift",
+        "repositoryURL": "https://github.com/ReactiveX/RxSwift.git",
+        "state": {
+          "branch": null,
+          "revision": "7c17a6ccca06b5c107cfa4284e634562ddaf5951",
+          "version": "6.2.0"
+        }
+      },
+      {
+        "package": "Swinject",
+        "repositoryURL": "https://github.com/Swinject/Swinject.git",
+        "state": {
+          "branch": null,
+          "revision": "8a76d2c74bafbb455763487cc6a08e91bad1f78b",
+          "version": "2.7.1"
+        }
+      },
+      {
+        "package": "SwinjectAutoregistration",
+        "repositoryURL": "https://github.com/Swinject/SwinjectAutoregistration.git",
+        "state": {
+          "branch": null,
+          "revision": "136e57231434d038c3beef939e81f60f36ec8aec",
+          "version": "2.7.0"
+        }
+      }
+    ]
+  },
+  "version": 1
+}
