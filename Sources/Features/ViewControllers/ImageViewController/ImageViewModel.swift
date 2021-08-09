@@ -70,12 +70,12 @@ struct ImageViewModelDefault: ImageViewModel {
         }
         
         let date = fetchResult.map { image in
-            image.createdAt ?? ""
-        }
+            DateFormatterDefault(date: image.createdAt ?? "").convertToFriendly()
+        }.do(onNext: { _ in isLoading.accept(false) })
         
         let mainPhoto = fetchResult.map { image in
             image.urls?.small ?? ""
-        }.do(onNext: { _ in isLoading.accept(false) })
+        }
         
         output = .init(
             isLoading: isLoading.asObservable(),

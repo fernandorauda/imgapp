@@ -41,3 +41,26 @@ class Image: NSObject, Decodable {
         return numberOfLikes == 0 ? "" : "\(numberOfLikes)"
     }
 }
+
+
+struct DateFormatterDefault {
+    let date: String
+    
+    init(date: String) {
+        self.date = date
+    }
+    
+    func convertToFriendly() -> String {
+        let formatter = RelativeDateTimeFormatter()
+        let dateFormatCoordinate = DateFormatter()
+        formatter.dateTimeStyle = .named
+        dateFormatCoordinate.dateFormat = "yyyy-MM-dd'T'HH:mm:ssZ"
+        if let d = dateFormatCoordinate.date(from: date) {
+            let timeInterval = d.timeIntervalSinceNow
+            return formatter.localizedString(fromTimeInterval: timeInterval)
+        }
+        return ""
+    }
+    
+}
+
