@@ -53,15 +53,13 @@ final class HomeViewController: UIViewController {
     private func setupBindings() {
         viewModel.output.sections
             .observe(on: MainScheduler.asyncInstance)
-            .subscribe(onNext: { [weak self] sections in
-                self?.getDataSource(sectionType: sections)
-            }).disposed(by: disposeBag)
+            .bind(to: self.rx.sections)
+            .disposed(by: disposeBag)
         
         viewModel.output.favorite
             .observe(on: MainScheduler.asyncInstance)
-            .subscribe(onNext: { _ in
-                
-            }).disposed(by: disposeBag)
+            .bind(to: self.rx.favorite)
+            .disposed(by: disposeBag)
     }
     
     private func registerCells() {
@@ -106,4 +104,18 @@ extension HomeViewController: UICollectionViewDelegate {
             viewModel.input.loadImages.onNext(())
         }
     }
+}
+
+extension Reactive where Base: HomeViewController {
+    internal var sections: Binder<[SectionType]> {
+        return Binder(self.base, binding: { base, sections in
+            base.getDataSource(sectionType: sections)
+        })
+    }
+    
+    internal var favorite: Binder<Void> {
+        return Binder(self.base, binding: { _, _ in
+        })
+    }
+
 }

@@ -53,15 +53,13 @@ final class LikesViewController: UIViewController {
     private func setupBindings() {
         viewModel.output.sections
             .observe(on: MainScheduler.asyncInstance)
-            .subscribe(onNext: { [weak self] sections in
-                self?.getDataSource(sectionType: sections)
-            }).disposed(by: disposeBag)
+            .bind(to: self.rx.sections)
+            .disposed(by: disposeBag)
         
         viewModel.output.favorite
             .observe(on: MainScheduler.asyncInstance)
-            .subscribe(onNext: { _ in
-                
-            }).disposed(by: disposeBag)
+            .bind(to: self.rx.favorite)
+            .disposed(by: disposeBag)
     }
     
     
@@ -88,4 +86,19 @@ final class LikesViewController: UIViewController {
     override func didMarkFavorite(with image: Image) {
         viewModel.input.sendFavorite.onNext(image)
     }
+}
+
+
+extension Reactive where Base: LikesViewController {
+    internal var sections: Binder<[SectionType]> {
+        return Binder(self.base, binding: { base, sections in
+            base.getDataSource(sectionType: sections)
+        })
+    }
+    
+    internal var favorite: Binder<Void> {
+        return Binder(self.base, binding: { _, _ in
+        })
+    }
+
 }
