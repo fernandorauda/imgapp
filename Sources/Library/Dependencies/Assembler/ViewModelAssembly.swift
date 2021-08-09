@@ -17,7 +17,7 @@ final class ViewModelAssembly: Assembly {
                 factory: resolver ~> (HomeContentFactory.self),
                 dataEngine: resolver ~> (CoreDataEngine.self)
             )
-            viewModel.delegate = resolver.resolve(HomeViewModelDelegate.self)
+            viewModel.delegate = resolver.resolve(HomeCoordinatorDelegate.self)
             return viewModel
         }
         

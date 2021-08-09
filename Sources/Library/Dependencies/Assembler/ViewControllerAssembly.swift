@@ -11,7 +11,7 @@ import Swinject
 final class ViewControllerAssembly: Assembly {
     func assemble(container: Container) {
 
-        container.register(HomeViewController.self) { (resolver, delegate: HomeViewModelDelegate) in
+        container.register(HomeViewController.self) { (resolver, delegate: HomeCoordinatorDelegate) in
             var viewModel = resolver.resolve(HomeViewModelDefault.self)
             viewModel?.delegate = delegate
             return HomeViewController(

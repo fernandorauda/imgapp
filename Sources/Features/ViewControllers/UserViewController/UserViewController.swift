@@ -127,5 +127,4 @@ extension Reactive where Base: UserViewController {
             base.loadLocation(with: location)
         }
     }
-
 }

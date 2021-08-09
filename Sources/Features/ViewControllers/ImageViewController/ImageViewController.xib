@@ -9,6 +9,10 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="ImageViewController" customModule="imgapp" customModuleProvider="target">
             <connections>
+                <outlet property="dateLabel" destination="5DS-UG-4th" id="2q1-B4-PV8"/>
+                <outlet property="descriptionLabel" destination="79b-G3-Ur6" id="iQU-ks-SKF"/>
+                <outlet property="userImage" destination="3Bz-di-ul1" id="cfG-A5-Ytr"/>
+                <outlet property="userNameLabel" destination="tHn-ic-DdC" id="qJN-gL-NtM"/>
                 <outlet property="view" destination="iN0-l3-epB" id="lmu-lj-O3i"/>
             </connections>
         </placeholder>

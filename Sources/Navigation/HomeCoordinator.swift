@@ -7,6 +7,10 @@
 
 import UIKit
 
+protocol HomeCoordinatorDelegate: AnyObject {
+    func homeViewModelDidNavigateToUser(_ username: String)
+}
+
 final class HomeCoordinator: Coordinator {
     // MARK: Properties
 
@@ -30,13 +34,13 @@ final class HomeCoordinator: Coordinator {
             .resolver
             .resolve(
                 HomeViewController.self,
-                argument: self as HomeViewModelDelegate
+                argument: self as HomeCoordinatorDelegate
             ).unwrap()
         presenter.pushViewController(homeViewController, animated: true)
     }
 }
 
-extension HomeCoordinator: HomeViewModelDelegate {
+extension HomeCoordinator: HomeCoordinatorDelegate {
     func homeViewModelDidNavigateToUser(_ username: String) {
         let viewController: UserViewController = Injector
             .current

@@ -11,6 +11,7 @@ import CoreData
 class Image: NSObject, Decodable {
     let id: String?
     let likes: Int?
+    let desc: String?
     let urls: Url?
     let user: User?
     
@@ -19,6 +20,14 @@ class Image: NSObject, Decodable {
         self.likes = likes
         self.urls = urls
         self.user = user
+    }
+    
+    enum CodingKeys: String, CodingKey {
+        case id
+        case likes
+        case desc = "description"
+        case urls
+        case user
     }
     
     func numberOfLikes() -> String? {

@@ -19,10 +19,6 @@ struct HomeViewModelOutput {
     let favorite: Observable<Void>
 }
 
-protocol HomeViewModelDelegate: AnyObject {
-    func homeViewModelDidNavigateToUser(_ username: String)
-}
-
 protocol HomeViewModel {
     typealias Input = HomeViewModelInput
     typealias Output = HomeViewModelOutput
@@ -38,7 +34,7 @@ struct HomeViewModelDefault: HomeViewModel {
     let input: Input
     let output: Output
     
-    weak var delegate: HomeViewModelDelegate?
+    weak var delegate: HomeCoordinatorDelegate?
     
     private let factory: HomeContentFactory
     private let homeFetcher: HomeFetcher
