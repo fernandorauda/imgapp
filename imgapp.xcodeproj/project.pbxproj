@@ -15,6 +15,10 @@
 		CE8764F226C0BD8F0029D3F4 /* PersistencyAssembly.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE8764F126C0BD8F0029D3F4 /* PersistencyAssembly.swift */; };
 		CE8764F426C0C05A0029D3F4 /* LikesViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE8764F326C0C05A0029D3F4 /* LikesViewModel.swift */; };
 		CE8764F726C0D11C0029D3F4 /* EmptyCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE8764F626C0D11C0029D3F4 /* EmptyCollectionViewCell.swift */; };
+		CE8764F926C0D60E0029D3F4 /* EmptyCellViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE8764F826C0D60E0029D3F4 /* EmptyCellViewModel.swift */; };
+		CE8764FC26C0D8090029D3F4 /* UserViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE8764FB26C0D8090029D3F4 /* UserViewModel.swift */; };
+		CE8764FE26C0D8190029D3F4 /* UserViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE8764FD26C0D8190029D3F4 /* UserViewController.swift */; };
+		CE87650026C0D8230029D3F4 /* UserViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = CE8764FF26C0D8230029D3F4 /* UserViewController.xib */; };
 		CE9B02F026BEBCE1007A4928 /* Coordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE9B02EF26BEBCE1007A4928 /* Coordinator.swift */; };
 		CE9B02F326BEBD11007A4928 /* Optional+Unwrap.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE9B02F226BEBD11007A4928 /* Optional+Unwrap.swift */; };
 		CE9B02F626BEBD6A007A4928 /* Swinject in Frameworks */ = {isa = PBXBuildFile; productRef = CE9B02F526BEBD6A007A4928 /* Swinject */; };
@@ -82,6 +86,10 @@
 		CE8764F126C0BD8F0029D3F4 /* PersistencyAssembly.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersistencyAssembly.swift; sourceTree = "<group>"; };
 		CE8764F326C0C05A0029D3F4 /* LikesViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LikesViewModel.swift; sourceTree = "<group>"; };
 		CE8764F626C0D11C0029D3F4 /* EmptyCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmptyCollectionViewCell.swift; sourceTree = "<group>"; };
+		CE8764F826C0D60E0029D3F4 /* EmptyCellViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmptyCellViewModel.swift; sourceTree = "<group>"; };
+		CE8764FB26C0D8090029D3F4 /* UserViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserViewModel.swift; sourceTree = "<group>"; };
+		CE8764FD26C0D8190029D3F4 /* UserViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserViewController.swift; sourceTree = "<group>"; };
+		CE8764FF26C0D8230029D3F4 /* UserViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = UserViewController.xib; sourceTree = "<group>"; };
 		CE9B02EF26BEBCE1007A4928 /* Coordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Coordinator.swift; sourceTree = "<group>"; };
 		CE9B02F226BEBD11007A4928 /* Optional+Unwrap.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Optional+Unwrap.swift"; sourceTree = "<group>"; };
 		CE9B02FB26BEBDFD007A4928 /* Injector.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Injector.swift; sourceTree = "<group>"; };
@@ -185,8 +193,19 @@
 			isa = PBXGroup;
 			children = (
 				CE8764F626C0D11C0029D3F4 /* EmptyCollectionViewCell.swift */,
+				CE8764F826C0D60E0029D3F4 /* EmptyCellViewModel.swift */,
 			);
 			path = EmptyCell;
+			sourceTree = "<group>";
+		};
+		CE8764FA26C0D7F40029D3F4 /* UserViewController */ = {
+			isa = PBXGroup;
+			children = (
+				CE8764FB26C0D8090029D3F4 /* UserViewModel.swift */,
+				CE8764FD26C0D8190029D3F4 /* UserViewController.swift */,
+				CE8764FF26C0D8230029D3F4 /* UserViewController.xib */,
+			);
+			path = UserViewController;
 			sourceTree = "<group>";
 		};
 		CE9B02E726BEB92D007A4928 /* Supporting Files */ = {
@@ -312,6 +331,7 @@
 		CE9B030526BECEC7007A4928 /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
+				CE8764FA26C0D7F40029D3F4 /* UserViewController */,
 				CE9B030926BECF7C007A4928 /* LikesViewController */,
 				CE9B030626BECED1007A4928 /* HomeViewController */,
 			);
@@ -528,6 +548,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				CE5E482426BE39DF00AB7FC9 /* LaunchScreen.storyboard in Resources */,
+				CE87650026C0D8230029D3F4 /* UserViewController.xib in Resources */,
 				CE5E482126BE39DF00AB7FC9 /* Assets.xcassets in Resources */,
 				CE9B030826BECEE1007A4928 /* HomeViewController.xib in Resources */,
 				CE9B030D26BECFA6007A4928 /* LikesViewController.xib in Resources */,
@@ -542,6 +563,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				CE9B02FC26BEBDFD007A4928 /* Injector.swift in Sources */,
+				CE8764F926C0D60E0029D3F4 /* EmptyCellViewModel.swift in Sources */,
 				CE9B031B26BEEBC4007A4928 /* UrlConfiguration.swift in Sources */,
 				CE9B035126BF7CC4007A4928 /* Cell.swift in Sources */,
 				CE8764F026C0A8540029D3F4 /* Images.xcdatamodeld in Sources */,
@@ -573,9 +595,11 @@
 				CE9B031726BEE788007A4928 /* Url.swift in Sources */,
 				CE8764F226C0BD8F0029D3F4 /* PersistencyAssembly.swift in Sources */,
 				CE9B031926BEE82C007A4928 /* User.swift in Sources */,
+				CE8764FC26C0D8090029D3F4 /* UserViewModel.swift in Sources */,
 				CE9B030226BEC7F8007A4928 /* TabBarCoordinator.swift in Sources */,
 				CEA7779F26C070820003D821 /* LoadingCellViewModel.swift in Sources */,
 				CE9B02F326BEBD11007A4928 /* Optional+Unwrap.swift in Sources */,
+				CE8764FE26C0D8190029D3F4 /* UserViewController.swift in Sources */,
 				CEA777A226C074D40003D821 /* Paginator.swift in Sources */,
 				CEA7779326C06BA40003D821 /* LoadingCollectionViewCell.swift in Sources */,
 				CE9B031D26BEEC1A007A4928 /* Endpoint.swift in Sources */,

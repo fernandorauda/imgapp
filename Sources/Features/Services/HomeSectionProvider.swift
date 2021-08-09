@@ -24,6 +24,9 @@ final class HomeSectionControllerProvider: SectionControllerProvider {
             guard let viewModel = viewModel as? HomeSectionViewModel<LoadingCellViewModel> else { return NSObject() as! Section }
             
             return HomeSection<LoadingCellViewModel>(cellConfigurator: ListCellConfigurator(cellClass: LoadingCollectionViewCell.self, layout: loadingLayout()), viewModel: viewModel)
+        case let .empty(viewModel):
+            guard let viewModel = viewModel as? HomeSectionViewModel<EmptyCellViewModel> else { return NSObject() as! Section }
+            return HomeSection<EmptyCellViewModel>(cellConfigurator: ListCellConfigurator(cellClass: EmptyCollectionViewCell.self, layout: loadingLayout()), viewModel: viewModel)
         }
     }
     

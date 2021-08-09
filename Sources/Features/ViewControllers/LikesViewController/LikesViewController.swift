@@ -64,7 +64,14 @@ final class LikesViewController: UIViewController {
     
     
     private func registerCells() {
-        collectionView.register(ImageCollectionViewCell.self, forCellWithReuseIdentifier: String(describing:ImageCollectionViewCell.self))
+        collectionView.register(
+            ImageCollectionViewCell.self,
+            forCellWithReuseIdentifier: String(describing: ImageCollectionViewCell.self)
+        )
+        collectionView.register(
+            EmptyCollectionViewCell.self,
+            forCellWithReuseIdentifier: String(describing: EmptyCollectionViewCell.self)
+        )
     }
     
     // MARK: Configuration
@@ -79,6 +86,7 @@ final class LikesViewController: UIViewController {
         
         collectionView.setCollectionViewLayout(layout, animated: false)
         collectionView.dataSource = dataSource
+        collectionView.reloadData()
     }
 
     // MARK: - Actions

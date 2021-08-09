@@ -44,7 +44,7 @@ struct LikesViewModelDefault: LikesViewModel {
         let sections = input.loadImages
             .flatMapLatest { [dataEngine, factory] _ -> Observable<[SectionType]> in
                 dataEngine.getItems().map { items -> [SectionType] in
-                    factory.sections(images: items ?? [], isLoading: false)
+                    factory.sections(images: items ?? [], isLoading: false, isEmpty: items?.isEmpty ?? false)
                 }
             }
         

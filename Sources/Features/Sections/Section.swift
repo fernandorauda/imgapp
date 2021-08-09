@@ -21,6 +21,7 @@ protocol SectionViewModel {
 enum SectionType {
     case images(viewModel: Any)
     case loading(viewModel: Any)
+    case empty(viewModel: Any)
 }
 
 extension SectionType {
@@ -29,6 +30,8 @@ extension SectionType {
         case let .images(viewModel):
             return viewModel
         case let .loading(viewModel):
+            return viewModel
+        case let .empty(viewModel):
             return viewModel
         }
     }

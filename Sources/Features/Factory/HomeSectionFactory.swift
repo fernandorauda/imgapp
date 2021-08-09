@@ -8,14 +8,18 @@
 import Foundation
 
 final class HomeContentFactory {
-    func sections(images: [Image], isLoading: Bool) -> [SectionType] {
+    func sections(images: [Image], isLoading: Bool, isEmpty: Bool = false) -> [SectionType] {
         var sections: [SectionType] = []
         if !images.isEmpty {
             sections.append(.images(viewModel: getImageListSection(images: images)))
         }
         
         if isLoading {
-            sections.append(.loading(viewModel: HomeSectionViewModel(viewModels: [LoadingCellViewModel()])))
+            sections.append(.loading(viewModel: HomeSectionViewModel(viewModels: [LoadingCellViewModel()]) ))
+        }
+        
+        if isEmpty {
+            sections.append(.empty(viewModel: HomeSectionViewModel(viewModels: [EmptyCellViewModel()]) ))
         }
         
         return sections

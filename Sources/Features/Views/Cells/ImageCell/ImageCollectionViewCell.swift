@@ -83,6 +83,7 @@ final class ImageCollectionViewCell: UICollectionViewCell {
         imageView.image = nil
         nameUserLabel.text = nil
         profileImage.image = nil
+        viewModel = nil
     }
     
     private func initialized() {
