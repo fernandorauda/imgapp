@@ -14,6 +14,10 @@ final class FetcherAssembly: Assembly {
         container.register(HomeFetcherDefault.self) { resolver in
             HomeFetcherDefault(imageRepository: resolver ~> (ImagesRepositoryDefault.self))
         }
+        
+        container.register(UserFetcherDefault.self) { resolver in
+            UserFetcherDefault(userRepository: resolver ~> (UserRepositoryDefault.self))
+        }
 
     }
 }

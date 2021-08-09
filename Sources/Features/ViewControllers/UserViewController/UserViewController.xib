@@ -10,6 +10,13 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="UserViewController" customModule="imgapp" customModuleProvider="target">
             <connections>
+                <outlet property="bioLabel" destination="bH5-Mt-vdf" id="db7-4r-NCe"/>
+                <outlet property="locationLabel" destination="0dw-Gl-WKP" id="7Ke-Gu-siS"/>
+                <outlet property="nameLabel" destination="S3H-VR-N6L" id="1uY-1b-JHZ"/>
+                <outlet property="numberOfCollectionsLabel" destination="xnv-Ec-JXh" id="CWK-7I-ZyL"/>
+                <outlet property="numberOfLikesLabel" destination="0QF-gb-iLr" id="I6B-WH-HCY"/>
+                <outlet property="numberOfPhotosLabel" destination="VXf-NU-gXd" id="Byf-WK-zZq"/>
+                <outlet property="photoImageView" destination="vNZ-3J-hvq" id="JE7-8a-KES"/>
                 <outlet property="view" destination="iN0-l3-epB" id="kYG-ge-5zZ"/>
             </connections>
         </placeholder>
@@ -30,6 +37,11 @@
                                         <constraint firstAttribute="width" secondItem="vNZ-3J-hvq" secondAttribute="height" multiplier="1:1" id="PDX-2Z-9tn"/>
                                         <constraint firstAttribute="height" constant="120" id="Y0F-Ji-6jh"/>
                                     </constraints>
+                                    <userDefinedRuntimeAttributes>
+                                        <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                            <real key="value" value="60"/>
+                                        </userDefinedRuntimeAttribute>
+                                    </userDefinedRuntimeAttributes>
                                 </imageView>
                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="S3H-VR-N6L">
                                     <rect key="frame" x="16" y="152" width="382" height="27.5"/>

@@ -16,5 +16,11 @@ final class CoordinatorAssembly: Assembly {
             arguments: UINavigationController.self, Coordinator.self,
             initializer: TabBarCoordinator.init
         )
+        
+        container.autoregister(
+            HomeCoordinator.self,
+            arguments: UINavigationController.self, Coordinator.self,
+            initializer: HomeCoordinator.init
+        )
     }
 }

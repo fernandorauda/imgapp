@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		CE4684AA26C16F5E006698DA /* UserRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE4684A926C16F5E006698DA /* UserRepository.swift */; };
+		CE4684AC26C1719F006698DA /* UserFetcher.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE4684AB26C1719F006698DA /* UserFetcher.swift */; };
 		CE5E481826BE39DE00AB7FC9 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE5E481726BE39DE00AB7FC9 /* AppDelegate.swift */; };
 		CE5E481C26BE39DE00AB7FC9 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE5E481B26BE39DE00AB7FC9 /* HomeViewController.swift */; };
 		CE5E482126BE39DF00AB7FC9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CE5E482026BE39DF00AB7FC9 /* Assets.xcassets */; };
@@ -20,6 +22,7 @@
 		CE8764FE26C0D8190029D3F4 /* UserViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE8764FD26C0D8190029D3F4 /* UserViewController.swift */; };
 		CE87650026C0D8230029D3F4 /* UserViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = CE8764FF26C0D8230029D3F4 /* UserViewController.xib */; };
 		CE87650226C0DC270029D3F4 /* UIView+CornerRadius.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE87650126C0DC270029D3F4 /* UIView+CornerRadius.swift */; };
+		CE87650426C0DDC80029D3F4 /* HomeCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE87650326C0DDC80029D3F4 /* HomeCoordinator.swift */; };
 		CE9B02F026BEBCE1007A4928 /* Coordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE9B02EF26BEBCE1007A4928 /* Coordinator.swift */; };
 		CE9B02F326BEBD11007A4928 /* Optional+Unwrap.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE9B02F226BEBD11007A4928 /* Optional+Unwrap.swift */; };
 		CE9B02F626BEBD6A007A4928 /* Swinject in Frameworks */ = {isa = PBXBuildFile; productRef = CE9B02F526BEBD6A007A4928 /* Swinject */; };
@@ -78,6 +81,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		CE4684A926C16F5E006698DA /* UserRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserRepository.swift; sourceTree = "<group>"; };
+		CE4684AB26C1719F006698DA /* UserFetcher.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserFetcher.swift; sourceTree = "<group>"; };
 		CE5E481426BE39DE00AB7FC9 /* imgapp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = imgapp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CE5E481726BE39DE00AB7FC9 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		CE5E481B26BE39DE00AB7FC9 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
@@ -92,6 +97,7 @@
 		CE8764FD26C0D8190029D3F4 /* UserViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserViewController.swift; sourceTree = "<group>"; };
 		CE8764FF26C0D8230029D3F4 /* UserViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = UserViewController.xib; sourceTree = "<group>"; };
 		CE87650126C0DC270029D3F4 /* UIView+CornerRadius.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+CornerRadius.swift"; sourceTree = "<group>"; };
+		CE87650326C0DDC80029D3F4 /* HomeCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeCoordinator.swift; sourceTree = "<group>"; };
 		CE9B02EF26BEBCE1007A4928 /* Coordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Coordinator.swift; sourceTree = "<group>"; };
 		CE9B02F226BEBD11007A4928 /* Optional+Unwrap.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Optional+Unwrap.swift"; sourceTree = "<group>"; };
 		CE9B02FB26BEBDFD007A4928 /* Injector.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Injector.swift; sourceTree = "<group>"; };
@@ -274,6 +280,7 @@
 				CE9B02FE26BEBE55007A4928 /* ApplicationCoordinator.swift */,
 				CE9B030126BEC7F8007A4928 /* TabBarCoordinator.swift */,
 				CE9B030326BEC96C007A4928 /* TabBarItem.swift */,
+				CE87650326C0DDC80029D3F4 /* HomeCoordinator.swift */,
 			);
 			path = Navigation;
 			sourceTree = "<group>";
@@ -384,6 +391,7 @@
 			isa = PBXGroup;
 			children = (
 				CE9B032C26BEF9F3007A4928 /* ImageRepository.swift */,
+				CE4684A926C16F5E006698DA /* UserRepository.swift */,
 			);
 			path = Repositories;
 			sourceTree = "<group>";
@@ -395,6 +403,7 @@
 				CEA7779C26C06DBB0003D821 /* ListCellConfigurator.swift */,
 				CE9B035426BF8140007A4928 /* DataSource.swift */,
 				CE9B033326BF2812007A4928 /* HomeFetcher.swift */,
+				CE4684AB26C1719F006698DA /* UserFetcher.swift */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -575,6 +584,7 @@
 				CE8764F426C0C05A0029D3F4 /* LikesViewModel.swift in Sources */,
 				CE9B033826BF2C7C007A4928 /* ViewModelAssembly.swift in Sources */,
 				CE9B034026BF30BB007A4928 /* RepositoryAssembler.swift in Sources */,
+				CE87650426C0DDC80029D3F4 /* HomeCoordinator.swift in Sources */,
 				CEA7779026C042F80003D821 /* UILabel+Shadow.swift in Sources */,
 				CEA777AA26C092650003D821 /* UIResponder+Extension.swift in Sources */,
 				CEA7779B26C06D590003D821 /* HomeSectionProvider.swift in Sources */,
@@ -602,6 +612,7 @@
 				CE8764FC26C0D8090029D3F4 /* UserViewModel.swift in Sources */,
 				CE9B030226BEC7F8007A4928 /* TabBarCoordinator.swift in Sources */,
 				CEA7779F26C070820003D821 /* LoadingCellViewModel.swift in Sources */,
+				CE4684AA26C16F5E006698DA /* UserRepository.swift in Sources */,
 				CE9B02F326BEBD11007A4928 /* Optional+Unwrap.swift in Sources */,
 				CE8764FE26C0D8190029D3F4 /* UserViewController.swift in Sources */,
 				CEA777A226C074D40003D821 /* Paginator.swift in Sources */,
@@ -616,6 +627,7 @@
 				CE9B033C26BF3029007A4928 /* NetworkAssembly.swift in Sources */,
 				CE9B035526BF8140007A4928 /* DataSource.swift in Sources */,
 				CE9B02F026BEBCE1007A4928 /* Coordinator.swift in Sources */,
+				CE4684AC26C1719F006698DA /* UserFetcher.swift in Sources */,
 				CEA777B026C09A610003D821 /* DataEngine.swift in Sources */,
 				CE9B031F26BEED88007A4928 /* APIEndpoints.swift in Sources */,
 				CE9B030426BEC96C007A4928 /* TabBarItem.swift in Sources */,

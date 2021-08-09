@@ -12,13 +12,13 @@ enum Injector {
         let container = Container()
         let assembler = Assembler(
             [
-                ViewModelAssembly(),
-                ViewControllerAssembly(),
                 FetcherAssembly(),
                 RepositoryAssembly(),
                 NetworkAssembly(),
-                CoordinatorAssembly(),
-                PersistencyAssembly()
+                PersistencyAssembly(),
+                ViewModelAssembly(),
+                ViewControllerAssembly(),
+                CoordinatorAssembly()
             ],
             container: container
         )

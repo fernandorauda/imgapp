@@ -48,7 +48,6 @@ final class TabBarCoordinator: Coordinator {
         tabBarController.selectedIndex = TabBarItem.home.pageOrderNumber()
         tabBarController.tabBar.isTranslucent = false
         
-        //presenter.title = "OSO"
         presenter.viewControllers = [tabBarController]
     }
 
@@ -63,8 +62,14 @@ final class TabBarCoordinator: Coordinator {
         switch item {
         case .home:
             // If needed: Each tab bar flow can have it's own Coordinator.
-            let homeViewController: HomeViewController = Injector.current.resolver.resolve(HomeViewController.self).unwrap()
-            navController.pushViewController(homeViewController, animated: true)
+        
+            
+            let coordinator: HomeCoordinator = Injector.current.resolver.resolve(
+                HomeCoordinator.self,
+                arguments: navController, self as Coordinator
+            ).unwrap()
+            coordinator.start()
+            addChildCoordinator(coordinator)
         case .likes:
             let likesViewController: LikesViewController = Injector.current.resolver.resolve(LikesViewController.self).unwrap()
             navController.pushViewController(likesViewController, animated: true)

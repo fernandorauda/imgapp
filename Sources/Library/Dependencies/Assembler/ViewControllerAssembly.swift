@@ -11,9 +11,11 @@ import Swinject
 final class ViewControllerAssembly: Assembly {
     func assemble(container: Container) {
 
-        container.register(HomeViewController.self) { resolver in
-            HomeViewController(
-                viewModel: resolver ~> (HomeViewModelDefault.self),
+        container.register(HomeViewController.self) { (resolver, delegate: HomeViewModelDelegate) in
+            var viewModel = resolver.resolve(HomeViewModelDefault.self)
+            viewModel?.delegate = delegate
+            return HomeViewController(
+                viewModel: viewModel!,
                 sectionControllerProvider: resolver ~> (HomeSectionControllerProvider.self)
             )
         }
@@ -23,6 +25,11 @@ final class ViewControllerAssembly: Assembly {
                 viewModel: resolver ~> (LikesViewModelDefault.self),
                 sectionControllerProvider: resolver ~> (HomeSectionControllerProvider.self)
             )
+        }
+        
+        container.register(UserViewController.self) { (resolver, username: String) in
+            let viewModel = UserViewModelDefault(userFetcher: resolver ~> (UserFetcherDefault.self), username: username)
+            return UserViewController(viewModel: viewModel)
         }
         
         container.autoregister(HomeSectionControllerProvider.self, initializer: HomeSectionControllerProvider.init)

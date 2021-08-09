@@ -7,21 +7,31 @@
 
 import SwinjectAutoregistration
 import Swinject
+import UIKit
 
 final class ViewModelAssembly: Assembly {
     func assemble(container: Container) {
         container.register(HomeViewModelDefault.self) { resolver in
-            HomeViewModelDefault(
+            var viewModel = HomeViewModelDefault(
                 homeFetcher: resolver ~> (HomeFetcherDefault.self),
                 factory: resolver ~> (HomeContentFactory.self),
                 dataEngine: resolver ~> (CoreDataEngine.self)
             )
+            viewModel.delegate = resolver.resolve(HomeViewModelDelegate.self)
+            return viewModel
         }
         
         container.register(LikesViewModelDefault.self) { resolver in
             LikesViewModelDefault(
                 factory: resolver ~> (HomeContentFactory.self),
                 dataEngine: resolver ~> (CoreDataEngine.self)
+            )
+        }
+        
+        container.register(UserViewModelDefault.self) { resolver in
+            UserViewModelDefault(
+                userFetcher: resolver ~> (UserFetcherDefault.self),
+                username: resolver ~> (String.self)
             )
         }
     }

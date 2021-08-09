@@ -86,6 +86,10 @@ final class HomeViewController: UIViewController {
     override func didMarkFavorite(with image: Image) {
         viewModel.input.sendFavorite.onNext(image)
     }
+    
+    override func didOpenUserDetail(with username: String) {
+        viewModel.navigateToUser(username: username)
+    }
 }
 
 // MARK: ScrollViewDelegate

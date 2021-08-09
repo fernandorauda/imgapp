@@ -11,4 +11,8 @@ extension UIResponder {
     @objc func didMarkFavorite(with image: Image) {
         next?.didMarkFavorite(with: image)
     }
+    
+    @objc func didOpenUserDetail(with username: String) {
+        next?.didOpenUserDetail(with: username)
+    }
 }

@@ -16,4 +16,10 @@ struct APIEndpoints {
         )
     }
     
+    static func getUser(with username: String) -> Endpoint<User> {
+        Endpoint(path: "users/\(username)/",
+                 method: .get
+        )
+    }
+    
 }

@@ -26,6 +26,7 @@ final class ImageCollectionViewCell: UICollectionViewCell {
         imageView.layer.cornerRadius = 16
         imageView.layer.masksToBounds = true
         imageView.contentMode = .scaleAspectFill
+        imageView.isUserInteractionEnabled = true
         imageView.backgroundColor = .secondarySystemBackground
         imageView.translatesAutoresizingMaskIntoConstraints = false
         return imageView
@@ -36,6 +37,7 @@ final class ImageCollectionViewCell: UICollectionViewCell {
         label.shadow()
         label.numberOfLines = 2
         label.textColor = .white
+        label.isUserInteractionEnabled = true
         label.font = UIFont(name: "HelveticaNeue-Medium", size: 12)
         label.translatesAutoresizingMaskIntoConstraints = false
         return label
@@ -71,12 +73,14 @@ final class ImageCollectionViewCell: UICollectionViewCell {
         super.init(frame: frame)
         
         initialized()
+        addGestures()
     }
 
     required init?(coder: NSCoder) {
         super.init(coder: coder)
         
         initialized()
+        addGestures()
     }
     
     override func prepareForReuse() {
@@ -128,10 +132,20 @@ final class ImageCollectionViewCell: UICollectionViewCell {
         numberOfLikesLabel.text = likes
     }
     
+    func addGestures() {
+        let tapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(imageTapped(tapGestureRecognizer:)))
+        profileImage.addGestureRecognizer(tapGestureRecognizer)
+        nameUserLabel.addGestureRecognizer(tapGestureRecognizer)
+    }
+    
     // MARK: - Actions
     
     @objc private func favoriteAction() {
         next?.didMarkFavorite(with: viewModel.image)
+    }
+    
+    @objc func imageTapped(tapGestureRecognizer: UITapGestureRecognizer) {
+        next?.didOpenUserDetail(with: viewModel.username)
     }
 }
 
