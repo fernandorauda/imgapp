@@ -19,6 +19,7 @@
 		CE8764FC26C0D8090029D3F4 /* UserViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE8764FB26C0D8090029D3F4 /* UserViewModel.swift */; };
 		CE8764FE26C0D8190029D3F4 /* UserViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE8764FD26C0D8190029D3F4 /* UserViewController.swift */; };
 		CE87650026C0D8230029D3F4 /* UserViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = CE8764FF26C0D8230029D3F4 /* UserViewController.xib */; };
+		CE87650226C0DC270029D3F4 /* UIView+CornerRadius.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE87650126C0DC270029D3F4 /* UIView+CornerRadius.swift */; };
 		CE9B02F026BEBCE1007A4928 /* Coordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE9B02EF26BEBCE1007A4928 /* Coordinator.swift */; };
 		CE9B02F326BEBD11007A4928 /* Optional+Unwrap.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE9B02F226BEBD11007A4928 /* Optional+Unwrap.swift */; };
 		CE9B02F626BEBD6A007A4928 /* Swinject in Frameworks */ = {isa = PBXBuildFile; productRef = CE9B02F526BEBD6A007A4928 /* Swinject */; };
@@ -90,6 +91,7 @@
 		CE8764FB26C0D8090029D3F4 /* UserViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserViewModel.swift; sourceTree = "<group>"; };
 		CE8764FD26C0D8190029D3F4 /* UserViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserViewController.swift; sourceTree = "<group>"; };
 		CE8764FF26C0D8230029D3F4 /* UserViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = UserViewController.xib; sourceTree = "<group>"; };
+		CE87650126C0DC270029D3F4 /* UIView+CornerRadius.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+CornerRadius.swift"; sourceTree = "<group>"; };
 		CE9B02EF26BEBCE1007A4928 /* Coordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Coordinator.swift; sourceTree = "<group>"; };
 		CE9B02F226BEBD11007A4928 /* Optional+Unwrap.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Optional+Unwrap.swift"; sourceTree = "<group>"; };
 		CE9B02FB26BEBDFD007A4928 /* Injector.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Injector.swift; sourceTree = "<group>"; };
@@ -301,6 +303,7 @@
 				CEA777A526C076B10003D821 /* ObservableType+Void.swift */,
 				CEA777A726C07E330003D821 /* UIScrollView+Distance.swift */,
 				CEA777A926C092650003D821 /* UIResponder+Extension.swift */,
+				CE87650126C0DC270029D3F4 /* UIView+CornerRadius.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -581,6 +584,7 @@
 				CE9B034F26BF7C87007A4928 /* ImageCellViewModel.swift in Sources */,
 				CEA777A626C076B10003D821 /* ObservableType+Void.swift in Sources */,
 				CEA7779926C06D2E0003D821 /* HomeSectionFactory.swift in Sources */,
+				CE87650226C0DC270029D3F4 /* UIView+CornerRadius.swift in Sources */,
 				CE9B033626BF28BE007A4928 /* HomeViewModel.swift in Sources */,
 				CE5E481C26BE39DE00AB7FC9 /* HomeViewController.swift in Sources */,
 				CE9B032126BEF13A007A4928 /* NetworkService.swift in Sources */,
