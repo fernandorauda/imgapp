@@ -1,4 +1,4 @@
-[![Platform](https://img.shields.io/cocoapods/p/LFAlertController.svg?style=flat)]
+![Platform(https://img.shields.io/cocoapods/p/LFAlertController.svg?style=flat)]
 
 # imgapp
 ## Features
