@@ -47,6 +47,10 @@ struct CoreDataEngine: DataEngine {
         let image = NSManagedObject(entity: entity,
                                      insertInto: managedContext)
         
+        let currentItems = getItemsWithoutObserver()
+        
+        let existFavorite = currentItems.contains(where: { $0.id == item.id })
+        
         image.setValue(item.id ?? "", forKeyPath: "id")
         image.setValue(item.likes ?? "", forKeyPath: "likes")
         image.setValue(item.user?.name ?? "", forKey: "userName")
@@ -54,17 +58,27 @@ struct CoreDataEngine: DataEngine {
         image.setValue(item.urls?.small ?? "", forKey: "imageUrl")
         
         do {
-            try managedContext.save()
-            getItemTest()
+            if existFavorite {
+                try managedContext.save()
+            } else {
+                managedContext.delete(image)
+            }
         } catch let error as NSError {
             print("Could not save. \(error), \(error.userInfo)")
         }
     }
     
-    func getItemTest() {
+    func getItems() -> Observable<[Image]?> {
+        Observable.create { observer in
+            observer.onNext(getItemsWithoutObserver())
+            return Disposables.create()
+        }
+    }
+    
+    func getItemsWithoutObserver() -> [Image] {
         var images: [NSManagedObject] = []
         guard let appDelegate = UIApplication.shared.delegate as? AppDelegate else {
-            return
+            return []
         }
         
         let managedContext = appDelegate.persistentContainer.viewContext
@@ -72,33 +86,10 @@ struct CoreDataEngine: DataEngine {
         
         do {
             images = try managedContext.fetch(fetchRequest)
-            print(images)
+            return converToModel(with: images)
         } catch let error as NSError {
             print("Could not fetch. \(error), \(error.userInfo)")
-        }
-    }
-    
-    func getItems() -> Observable<[Image]?> {
-        Observable.create { observer in
-            var images: [NSManagedObject] = []
-            guard let appDelegate = UIApplication.shared.delegate as? AppDelegate else {
-                observer.onNext(nil)
-                observer.onCompleted()
-                return Disposables.create()
-            }
-            
-            let managedContext = appDelegate.persistentContainer.viewContext
-            let fetchRequest = NSFetchRequest<NSManagedObject>(entityName: "ImageEntity")
-            
-            do {
-                images = try managedContext.fetch(fetchRequest)
-                observer.onNext(converToModel(with: images))
-                observer.onCompleted()
-            } catch let error as NSError {
-                print("Could not fetch. \(error), \(error.userInfo)")
-                observer.onError(error)
-            }
-            return Disposables.create()
+            return []
         }
     }
     

@@ -13,6 +13,7 @@
 		CE5E482426BE39DF00AB7FC9 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CE5E482226BE39DF00AB7FC9 /* LaunchScreen.storyboard */; };
 		CE8764F026C0A8540029D3F4 /* Images.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = CEA777AC26C0981D0003D821 /* Images.xcdatamodeld */; };
 		CE8764F226C0BD8F0029D3F4 /* PersistencyAssembly.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE8764F126C0BD8F0029D3F4 /* PersistencyAssembly.swift */; };
+		CE8764F426C0C05A0029D3F4 /* LikesViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE8764F326C0C05A0029D3F4 /* LikesViewModel.swift */; };
 		CE9B02F026BEBCE1007A4928 /* Coordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE9B02EF26BEBCE1007A4928 /* Coordinator.swift */; };
 		CE9B02F326BEBD11007A4928 /* Optional+Unwrap.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE9B02F226BEBD11007A4928 /* Optional+Unwrap.swift */; };
 		CE9B02F626BEBD6A007A4928 /* Swinject in Frameworks */ = {isa = PBXBuildFile; productRef = CE9B02F526BEBD6A007A4928 /* Swinject */; };
@@ -78,6 +79,7 @@
 		CE5E482326BE39DF00AB7FC9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		CE5E482526BE39DF00AB7FC9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		CE8764F126C0BD8F0029D3F4 /* PersistencyAssembly.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersistencyAssembly.swift; sourceTree = "<group>"; };
+		CE8764F326C0C05A0029D3F4 /* LikesViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LikesViewModel.swift; sourceTree = "<group>"; };
 		CE9B02EF26BEBCE1007A4928 /* Coordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Coordinator.swift; sourceTree = "<group>"; };
 		CE9B02F226BEBD11007A4928 /* Optional+Unwrap.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Optional+Unwrap.swift"; sourceTree = "<group>"; };
 		CE9B02FB26BEBDFD007A4928 /* Injector.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Injector.swift; sourceTree = "<group>"; };
@@ -319,6 +321,7 @@
 		CE9B030926BECF7C007A4928 /* LikesViewController */ = {
 			isa = PBXGroup;
 			children = (
+				CE8764F326C0C05A0029D3F4 /* LikesViewModel.swift */,
 				CE9B030A26BECF9A007A4928 /* LikesViewController.swift */,
 				CE9B030C26BECFA6007A4928 /* LikesViewController.xib */,
 			);
@@ -533,6 +536,7 @@
 				CE8764F026C0A8540029D3F4 /* Images.xcdatamodeld in Sources */,
 				CE9B033A26BF2D9C007A4928 /* ViewControllerAssembly.swift in Sources */,
 				CEA777A826C07E330003D821 /* UIScrollView+Distance.swift in Sources */,
+				CE8764F426C0C05A0029D3F4 /* LikesViewModel.swift in Sources */,
 				CE9B033826BF2C7C007A4928 /* ViewModelAssembly.swift in Sources */,
 				CE9B034026BF30BB007A4928 /* RepositoryAssembler.swift in Sources */,
 				CEA7779026C042F80003D821 /* UILabel+Shadow.swift in Sources */,

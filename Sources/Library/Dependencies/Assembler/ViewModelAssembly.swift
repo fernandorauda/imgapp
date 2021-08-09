@@ -17,5 +17,12 @@ final class ViewModelAssembly: Assembly {
                 dataEngine: resolver ~> (CoreDataEngine.self)
             )
         }
+        
+        container.register(LikesViewModelDefault.self) { resolver in
+            LikesViewModelDefault(
+                factory: resolver ~> (HomeContentFactory.self),
+                dataEngine: resolver ~> (CoreDataEngine.self)
+            )
+        }
     }
 }

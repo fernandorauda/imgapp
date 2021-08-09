@@ -66,7 +66,7 @@ final class TabBarCoordinator: Coordinator {
             let homeViewController: HomeViewController = Injector.current.resolver.resolve(HomeViewController.self).unwrap()
             navController.pushViewController(homeViewController, animated: true)
         case .likes:
-            let likesViewController = LikesViewController()
+            let likesViewController: LikesViewController = Injector.current.resolver.resolve(LikesViewController.self).unwrap()
             navController.pushViewController(likesViewController, animated: true)
         }
         

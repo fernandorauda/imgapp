@@ -5,8 +5,8 @@
 //  Created by Adonys Rauda on 8/6/21.
 //
 
-import UIKit
 import RxSwift
+import UIKit
 
 final class HomeViewController: UIViewController {
     // MARK: IBOutlets

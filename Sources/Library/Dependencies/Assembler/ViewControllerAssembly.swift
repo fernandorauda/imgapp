@@ -12,7 +12,17 @@ final class ViewControllerAssembly: Assembly {
     func assemble(container: Container) {
 
         container.register(HomeViewController.self) { resolver in
-            HomeViewController(viewModel: resolver ~> (HomeViewModelDefault.self), sectionControllerProvider: resolver ~> (HomeSectionControllerProvider.self))
+            HomeViewController(
+                viewModel: resolver ~> (HomeViewModelDefault.self),
+                sectionControllerProvider: resolver ~> (HomeSectionControllerProvider.self)
+            )
+        }
+        
+        container.register(LikesViewController.self) { resolver in
+            LikesViewController(
+                viewModel: resolver ~> (LikesViewModelDefault.self),
+                sectionControllerProvider: resolver ~> (HomeSectionControllerProvider.self)
+            )
         }
         
         container.autoregister(HomeSectionControllerProvider.self, initializer: HomeSectionControllerProvider.init)
